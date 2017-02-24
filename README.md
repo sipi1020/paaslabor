@@ -6,11 +6,14 @@ TODO
 **Labor email elérhetőség:** alerant.bme.paas.labor@gmail.com
 **Értékelés:** A névtelenül beküldhető értékeléssel segítheted a munkánkat.
 
-#### Labor gyakorlatokhoz tudnivalók
+### Labor gyakorlatokhoz tudnivalók
 - A labor után a projekteket töröljük, de később nyugodtan újra készíthetitek őket.
 - Készítsetek magatoknak GitHub accountot, mert szükség lesz rá a gyakorlatnál.
 - A gépek elérése: TODO
-#### Jegyzőkönyv
+#### Workstation tudnivalók
+#### Server gépekről tudnivalók
+
+### Jegyzőkönyv
 Az értékelés/érdemjegy alapja, mindenki töltse ki és küldje el az email címével.
 A jegyzőkönyvben tesztkérdések és a gyakorlatok anyagaiból felmásolandó feladatok is vannak. Érdemes menet közben tölteni és egy külön dokumentumban külön is tárolni, nehogy elvesszen!
  
