@@ -12,6 +12,14 @@ docker --debug CMD
 ```
 [Legfontosabb Docker parancsok](https://www.cheatography.com/tobix10/cheat-sheets/docker-commands/)
 
+## Hasznos linux parancsok
+```shell
+brctl show
+ifconfig
+ip link show
+```
+
+
 ### Nginx
 /usr/share/nginx/html alatt a főoldal
 /etc/init.d/nginx stop|start|restart|status paranccsal lehet leállítani
