@@ -28,6 +28,14 @@ A labor célja a következő témák áttekintése:
 
 # Elméleti áttekintés
 ## IaaS, PaaS, SaaS
+![XaaS](img/common/images/xaas.jpg)
+### IaaS = Infrastructure as a Service
+- Tipikusan HW+OS platformot biztosít a használói számára (pl. szükségem van egy 2 CPU-s, CentOS7-re 2G memóriával)
+-- **Előnyök:** erős host gépeken egységes, standard virtualizáció, rapid gépigénylés (akár runtime skálázással)
+-- **Célcsoport:** üzemeltetők, DevOps
+-- **Példák:** Amazon EC2, Rackspace, Google Compute Engine, OpenStack. Ennél a labornál az IaaS megoldást az OpenStack nyújtja! (horizon demo)
+### PaaS = Platform as a Service
+- SaaS = Software as a Service
 ## Docker
 ## OpenShift áttekintés
 ## OpenShift skálázási lehetőségek
