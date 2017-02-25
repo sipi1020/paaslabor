@@ -47,10 +47,31 @@ Tipikusan kész alkalmazások, azok szolgáltatásait biztosítja a használói 
 
 
 ## Docker
-## OpenShift áttekintés
+### Konténerek
+### Alapfogalmak
+### Docker architektúra
+![dockerarch](common/images/architecture.jpg)
+### Rétegek
+![containerlayers](common/images/container-layers.jpg)
+### Perzisztens tárolók
+![sharedvolumes](common/images/shared-volume.jpg)
+### Hálózat
+### Legfontosabb parancsok
 
-## OpenShift skálázási lehetőségek
-## OpenShift hálózati kommunikáció
+## OpenShift áttekintés
+### OpenShift Origin vs OpenShift Enterprise
+![origin](common/images/openshift_vs_origin.png)
+### Alapfogalmak
+### OpenShift Architektúra
+![origin](common/images/openshift_arch2.png)
+### Alkalmazásfejlesztés
+![s2i](common/images/s2i.png)
+![s2i_2](common/images/s2i_2.png)
+### OpenShift skálázási lehetőségek
+![scaling](common/images/openshift_arch3.png)
+### OpenShift hálózati kommunikáció
+![networking](common/images/openshift_arch.png)
+
 
 # Gyakorlatok
 ## Gyakorlat 1. - Docker
