@@ -35,6 +35,7 @@ A labor célja a következő témák áttekintése:
 
 # Gyakorlatok
 ## Gyakorlat 1. - Docker
+[A gyakorlat itt érhető el](Gyakorlat1.md)
 ## Gyakorlat 2. - OpenShift alapműveletek, alapfogalmak a gyakorlatban
 ## Gyakorlat 3. - OpenShift S2I deployment
 
