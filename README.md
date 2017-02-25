@@ -1,23 +1,15 @@
 # Alerant - BME PaaS labor
-# Bevezetés
-TODO
-# Tudnivalók
-**Oktató:** Nagy Zoltán - Alerant Informatikai Zrt. (+36306803846, nagy.zoltan@alerant.hu)
+## Tudnivalók
+**Oktató:** Nagy Zoltán,Alerant Informatikai Zrt. (+36306803846, nagy.zoltan@alerant.hu)
 **Labor email elérhetőség:** alerant.bme.paas.labor@gmail.com
 
-## Labor gyakorlatokhoz tudnivalók
-- A labor után a projekteket töröljük, de később nyugodtan újra készíthetitek őket.
-- Készítsetek magatoknak GitHub accountot, mert szükség lesz rá a gyakorlatnál.
-- A gépek elérése: TODO
-### Workstation tudnivalók
-### Server gépekről tudnivalók
+[Minden további tudnivaló itt](Tudnivalok.md)
 
 ## Jegyzőkönyv
 Az értékelés/érdemjegy alapja, mindenki töltse ki és küldje el az email címével.
 A jegyzőkönyvben tesztkérdések és a gyakorlatok anyagaiból felmásolandó feladatok is vannak. Érdemes menet közben tölteni és egy külön dokumentumban külön is tárolni, nehogy elvesszen!
  
 [A jegyzőkönvyet itt töltsétek](https://goo.gl/forms/rKN2WAWNCjxpBulS2)
-
 
 # Célkitűzés, tematika
 A labor célja a következő témák áttekintése:
@@ -31,18 +23,28 @@ A labor célja a következő témák áttekintése:
 ![XaaS](common/images/xaas.jpg)
 ### IaaS = Infrastructure as a Service
 Tipikusan HW(+OS) platformot biztosít a használói számára (pl. szükségem van egy 2 CPU-s, CentOS7-re 2G memóriával)
-**Scope:** Infrastruktúra (virtuális gépek és image-ek, storage, hálózati elemek)
-**Előnyök:** erős host gépeken egységes/standard virtualizáció; rapid gépigénylés és létrehozás (akár runtime skálázással)
-**Célcsoport:** üzemeltetők, DevOps
-**Példák:** Amazon EC2, Rackspace, Google Compute Engine, OpenStack. Ennél a labornál az IaaS megoldást az OpenStack nyújtja!
+-**Scope:** Infrastruktúra (virtuális gépek és image-ek, storage, hálózati elemek)
+-**Előnyök:** erős host gépeken egységes/standard virtualizáció; rapid gépigénylés és létrehozás (akár runtime skálázással)
+-**Célcsoport:** üzemeltetők, DevOps
+-**Példák:** Amazon EC2, Rackspace, Google Compute Engine, OpenStack. Ennél a labornál az IaaS megoldást az OpenStack nyújtja!
 BME IaaS dashboard: https://ossrv1.aut.bme.hu/horizon
 ### PaaS = Platform as a Service
 Tipikusan alkalmazásszervereket, middleware-ket, alkalmazás futtatókörnyezetet biztosít a használói számára (pl. szükségem van egy JBoss JEE szerverre, vagy egy NodeJs futtató környezetre)
-**Scope:** Alkalmazás futtató környezetek (middleware-ek, alkalmazás platformok)
-**Előnyök:** egységes/standard alkalmazás fejlesztés és telepítési környezet; rapid platform igénylés és létrehozás (akár runtime skálázással)
-**Célcsoport:** alkalmazásfejlesztők
-**Példák:** OpenShift, Heroku, Google App Engine. Ennél a labornál a PaaS megoldást az OpenShift nyújtja!
+-**Scope:** Alkalmazás futtató környezetek (middleware-ek, alkalmazás platformok)
+-**Előnyök:** egységes/standard alkalmazás fejlesztés és telepítési környezet; rapid platform igénylés és létrehozás (akár runtime skálázással)
+-**Célcsoport:** alkalmazásfejlesztők
+-**Példák:** OpenShift, Heroku, Google App Engine. Ennél a labornál a PaaS megoldást az OpenShift nyújtja!
 BME PaaS dashboard: https://bmepaas-master.openshift.local
+### SaaS = Software as a Service
+Tipikusan kész alkalmazások, azok szolgáltatásait biztosítja a használói számára (pl. szükségem van egy levelező rendszerre, CRM alkalmazásra, Webshopra stb.)
+-**Scope:** Alkalmazások, szolgáltatások
+-**Előnyök:** azonnal elérhető, használható szolgáltatásom van; nincsenek fejlesztési költségek; egyszeri beruházsá helyett rendszeres díjazás
+-**Célcsoport:** végfelhasználók
+-**Példák:** Office Cloud, Google Apps (Forms, Calendar, ...)
+
+
+
+
 
 ## Docker
 ## OpenShift áttekintés
