@@ -6,7 +6,7 @@
 - Izolált névterek (fs, net, ps, mount, ipc,...)
 - Kiforrott, gyors, biztonságos, optimális erőforrás használat
 ## Alapfogalmak
-- Docker image: A root fájlrendszer módosításainak rendezett és rétegelt gyűjteménye. Nem módosítható. A futó konténerek alapja.
+- Docker image: A root fájlrendszer módosításainak rendezett és rétegelt gyűjteménye. Nem módosítható. A futó konténerek alapja, tartalmaz minden információt, hogy egy konténer példányosítható legyen belőle.
 - Docker container: Egy image futásidejű példánya, egy izolált linux konténer. Alapja egy Docker image, ami kiegészül futásidejű paraméterekkel, konfigurációkkal.
 - Docker registry: Image-ek gyűjtőhelye
 - Dockerfile: Parancsok, utasítások gyűjteménye. Egy alap image-en futtatva sorrendhelyesen az előbbi utasításokat egy új testreszabott image áll elő.  
