@@ -58,8 +58,10 @@ Futtassuk az előbbi konténert, ami kinyitja a 80-as portot és ellenőrizzük 
 2. Ellenőrizd a host gépen, hogy milyen hálózati interfészek vannak.
 3. Indítsd el pl. az előbbi feladat konténerét úgy, hogy nyisson egy portot a hoszton.
 4. Ellenőrizd a host gépen, hogy milyen hálózati interfészek vannak. Mi változott? Ellenőrizd a bridge-ket is!
+5. Próbáld ki a docker network inspect parancsot. Figyeld meg, hogy milyen konténerek csatlakoznak.
+6. (Opcionális) Akár több konténert is indíthatsz és az előbbi pontokat megnézheted ismét.
 
-_Hint: ezek a parancsok lesznek hasznotokra: ..., brctl, ifconfig_
+_Hint: ezek a parancsok lesznek hasznotokra: docker network, brctl, ifconfig_
 ### Jegyzőkönyvhöz
 Nincs feladat.
 
