@@ -56,11 +56,15 @@ Tipikusan kész alkalmazások, azok szolgáltatásait biztosítja a használói 
 ## Gyakorlat 1. - Docker
 [A gyakorlat itt érhető el](Gyakorlat1.md)
 ## Gyakorlat 2. - OpenShift alapműveletek, alapfogalmak a gyakorlatban
+[A gyakorlat itt érhető el](Gyakorlat2.md)
 ## Gyakorlat 3. - OpenShift S2I deployment
+[A gyakorlat itt érhető el](Gyakorlat3.md)
 
 # Opcionális gyakorlatok
 ## Gyakorlat 4. - OpenShift Skálázási parancsok
+[A gyakorlat itt érhető el](Gyakorlat4.md)
 ## Gyakorlat 5. - Hálózat
+[A gyakorlat itt érhető el](Gyakorlat5.md)
 
 # Értékelés
-[Az értékelés opcionális, névtelen, itt tölthetitek ki](https://goo.gl/forms/rKN2WAWNCjxpBulS2)
+[Az értékelés nem kötelező, névtelen, itt tölthetitek ki](https://goo.gl/forms/ibs2e7X2sGViZgH93)
