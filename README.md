@@ -28,7 +28,7 @@ A labor célja a következő témák áttekintése:
 
 # Elméleti áttekintés
 ## IaaS, PaaS, SaaS
-![XaaS](img/common/images/xaas.jpg)
+![XaaS](common/images/xaas.jpg)
 ### IaaS = Infrastructure as a Service
 - Tipikusan HW+OS platformot biztosít a használói számára (pl. szükségem van egy 2 CPU-s, CentOS7-re 2G memóriával)
 -- **Előnyök:** erős host gépeken egységes, standard virtualizáció, rapid gépigénylés (akár runtime skálázással)
