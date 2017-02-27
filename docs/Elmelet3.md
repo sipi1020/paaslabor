@@ -9,23 +9,26 @@ Ehhez a következő problémákra kell még megoldás:
 - Alkalmazás fordítási, deployálási folyamatok támogatása.
 
 Az OpenShift ezekre megoldást nyújt, ráépülve a Docker konténer technológiára.
+
 # OpenShift Origin vs OpenShift Enterprise
 ![origin](../common/images/openshift_vs_origin.png)
+
 # Alapfogalmak
--**Container, Image, Registry**: Az OpenShift a Docker-t használja konténer technológiaként ezért ezek pontosan a Docker foglamak.
--**Pod**: Egy vagy több konténer, közös tárterülettel, hálózattal. Telepítési, maanagement egység.
--**Node**: Podokat futtató gép.
--**Servive**: Belső terhelés elosztóként működnek. Egy hálózati portot reprezentál, amin elérhetőek a mögé bekötött POD-ok.
--**Build, BuildConfig**: Egy alkalmazás forráskódjából Docker image készül. Ez a folyamat a Build és ennek a paraméterezése a BuildConfig.
+- **Container, Image, Registry**: Az OpenShift a Docker-t használja konténer technológiaként ezért ezek pontosan a Docker foglamak.
+- **Pod**: Egy vagy több konténer, közös tárterülettel, hálózattal. Telepítési, maanagement egység.
+- **Node**: Podokat futtató gép.
+- **Servive**: Belső terhelés elosztóként működnek. Egy hálózati portot reprezentál, amin elérhetőek a mögé bekötött POD-ok.
+- **Build, BuildConfig**: Egy alkalmazás forráskódjából Docker image készül. Ez a folyamat a Build és ennek a paraméterezése a BuildConfig.
 Az OpenShift alapegységei YAML ill. JSON formátumban is leírhatók. 
+
 # OpenShift Architektúra
 ![origin](../common/images/openshift_arch2.png)
+
 # Alkalmazásfejlesztés
 ![s2i](../common/images/s2i.png)
 ![s2i_2](../common/images/s2i_2.png)
 
 ## Build és ImageStream
-
 Három módon témogatja az alkalmazások buildelését az OpenShift::
 1. Docker: ez gyakorlatilag a Dockerfile alapú buildelési folyamat
 2. S2I -Source to Image: a forráskód és egy Builder docker image alapján lefordítja, összeállítja a végterméket (itt is egy Docker image-et)
@@ -34,13 +37,19 @@ Három módon témogatja az alkalmazások buildelését az OpenShift::
 **ImageStream**
 Új image (pl. új verziójú build) elkészülése esetén szükség lehet követő tevékenységekre, pl. automatikus deployra.
 Egy ilyen ImageStream egy nézetet biztosít egy vagy több Docker image-re a címkéken keresztül (pl. cimke a webszerveren, db-n,stb.)
+
 **ImageStreamMapping**
 Ha egy új Image kerül a registry-be, akkor készül egy metadata leíró, egy ImageStreamMapping
 
 ## Deployment, DeploymentConfiguration
 
 # OpenShift adminisztráció
-## oc parancs
+A master node-on fut, amelyet egy floating IP-n keresztül lehet elérni. A host neve nem a központi
+https://bmepaas-master.openshift.local:8443
+
+## OpenShift dashboard
+
+## CLI parancsok
 ```shell
 oc login            --belépés
 oc new-app          --új alkalmazás létrehozása
