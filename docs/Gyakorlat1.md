@@ -27,6 +27,7 @@ ip link show
 ## Feladat 1. - Docker alapműveletek
 ### Célja, leírás
 Ennek a feladatnak a célja, hogy a legfontosabb Docker parancsokat megismerjétek.
+
 1. Listázd az elérhető Docker parancsokat, ismerkedj meg a help-jével, hogy könnyen megtalálj majd mindent a későbbiekben. (pl. a debug opció mindig jól jön)
 2. Nézd meg milyen image-ek vannak már lehúzva a helyi registry-be.
 3. Húzz le egy cirros image-et. Próbáld ki az image keresést is. (docker.io/cirros)
@@ -51,6 +52,7 @@ A feladat, hogy futtassatok Docker containerben egy web szervert. A host gépen 
 
 Javasolt web szerver: nginx
 A következőket biztosan meg kell oldani:
+
 1. A konténer belső portjának megnyitása a host felé
 2. Figyeljétek meg a konténer státuszát! élettartamát! Ha megváltoztattok benne pl. egy index.html-et és leállítjátok, akkor következő indításnál már nem lesz ott.
 3. (Opcionális) Esetleg köteg becsatolással is megoldható (docker run -v ...).
@@ -62,6 +64,7 @@ A kulcs parancsokkal együtt egy 2-3 mondatos leírás legyen, hogy hogyan oldot
 ## Feladat 3.
 ### Célja, leírás
 Futtassuk az előbbi konténert, ami kinyitja a 80-as portot és ellenőrizzük a hálózati működést.
+
 1. Állítsd le az összes futó konténert.
 2. Ellenőrizd a host gépen, hogy milyen hálózati interfészek vannak.
 3. Indítsd el pl. az előbbi feladat konténerét úgy, hogy nyisson egy portot a hoszton.
