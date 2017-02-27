@@ -1,23 +1,30 @@
 # Alerant - BME PaaS labor
 # OpenShift áttekintés
-A Docker konténerek önmagukban még nem alkalmasak arra, hogy egy PaaS megoldást nyújtsanak.
-Egy PaaS teljeskörű és transzparens platformon nyújtja az alkalmazásszerver platformot.
+A Docker konténerek önmagukban még nem alkalmasak arra, hogy egy teljes PaaS megoldást nyújtsanak.
+Egy PaaS teljeskörű és transzparens infrastruktúrán nyújtja az alkalmazásfejlesztési platformot.
 
-Ehhez a következő problémákra kell még megoldás:
-- A különböző konténerek összekapcsolása, management-je fapados.
+A Docker önmagában nem elég ehhez, a következő problémákra kell még megoldás:
+- A különböző konténerek összekapcsolása, management-je fapados, ha csak a Docker-re építkezünk.
 - Nincs megoldva a skálázás, failover, high-availability.
 - Alkalmazás fordítási, deployálási folyamatok támogatása.
 
-Az OpenShift ezekre megoldást nyújt, ráépülve a Docker konténer technológiára.
+Ezekre a problémákra vannak megoldások:
+- Kubernetes, Docker Compose, Docker swarm - konténer menedzsment
+- Alkalmazásfejlesztési módszertanok, eszközök: Git vagy más SCM, Jenkins,...
+- Hálózati eszközök: OvSwitch, Linux kernel technológiák
+
+Az OpenShift ezekre megoldást nyújt, ráépülve a Docker konténer technológiára és más bevált eszközökre.
 
 # OpenShift Origin vs OpenShift Enterprise
 ![origin](../common/images/openshift_vs_origin.png)
 
 # Alapfogalmak
+- **Project**: adminisztratív izoláció, az egyes szállítók külön-külön egymástól izolálva dolgozhatnak. A Node-ot kivéve minden OpenShift entitás/resource Project scopeú.
+- **User**: az OpenShift felhasználói, akik tevékenysége jogosultságkezeléssel korlátozható
 - **Container, Image, Registry**: Az OpenShift a Docker-t használja konténer technológiaként ezért ezek pontosan a Docker foglamak.
 - **Pod**: Egy vagy több konténer, közös tárterülettel, hálózattal. Telepítési, maanagement egység.
 - **Node**: Podokat futtató gép.
-- **Servive**: Belső terhelés elosztóként működnek. Egy hálózati portot reprezentál, amin elérhetőek a mögé bekötött POD-ok.
+- **Service**: Egy hálózati portot reprezentál, amin elérhetőek a mögé bekötött POD-ok ill. azok szolgáltatásai. Belső terhelés elosztóként működnek. 
 - **Build, BuildConfig**: Egy alkalmazás forráskódjából Docker image készül. Ez a folyamat a Build és ennek a paraméterezése a BuildConfig.
 Az OpenShift alapegységei YAML ill. JSON formátumban is leírhatók. 
 
@@ -49,8 +56,11 @@ https://bmepaas-master.openshift.local:8443
 
 ## OpenShift dashboard
 
-## CLI parancsok
+## Legfontosabb CLI parancsok
 ```shell
+oc help
+oc CMD --help
+oc types            --OpenShift alap entitások leírása
 oc login            --belépés
 oc new-app          --új alkalmazás létrehozása
 ```
