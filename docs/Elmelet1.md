@@ -1,6 +1,6 @@
 # Alerant - BME PaaS labor
 # IaaS, PaaS, SaaS
-![XaaS](common/images/xaas.jpg)
+![XaaS](../common/images/xaas.jpg)
 ## IaaS = Infrastructure as a Service
 Tipikusan HW(+OS) platformot biztosít a használói számára (pl. szükségem van egy 2 CPU-s, CentOS7-re 2G memóriával)
 -**Scope:** Infrastruktúra (virtuális gépek és image-ek, storage, hálózati elemek)

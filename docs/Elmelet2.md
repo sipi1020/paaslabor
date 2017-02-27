@@ -6,7 +6,7 @@
 - Izolált névterek (fs, net, ps, mount, ipc,...)
 - Kiforrott, gyors, biztonságos, optimális erőforrás használat
 
-![containervsvm](common/images/ContainerVsVM.jpg)
+![containervsvm](../common/images/ContainerVsVM.jpg)
 ## Alapfogalmak
 - Docker image: A root fájlrendszer módosításainak rendezett és rétegelt gyűjteménye. Nem módosítható. A futó konténerek alapja, tartalmaz minden információt, hogy egy konténer példányosítható legyen belőle.
 - Docker container: Egy image futásidejű példánya, egy izolált linux konténer. Alapja egy Docker image, ami kiegészül futásidejű paraméterekkel, konfigurációkkal.
@@ -14,19 +14,19 @@
 - Dockerfile: Parancsok, utasítások gyűjteménye. Egy alap image-en futtatva sorrendhelyesen az előbbi utasításokat egy új testreszabott image áll elő.  
 
 https://docs.docker.com/engine/reference/glossary
-![images_containers](common/images/docker_images_containers.png)
+![images_containers](../common/images/docker_images_containers.png)
 ## Docker architektúra
-![dockerlinux](common/images/dockerarch.png)
-![dockerarch](common/images/architecture.jpg)
+![dockerlinux](../common/images/dockerarch.png)
+![dockerarch](../common/images/architecture.jpg)
 ## Rétegek
 - Az image-en végzett utasítások újabb és újabb rétegeket képeznek.
 - Egy image nem módosítható, a konténer példány is egy újabb rétegként jelenik meg.
 - A konténer példány tartosítható, image-be menthető.
-![containerlayers](common/images/container-layers.jpg)
+![containerlayers](../common/images/container-layers.jpg)
 ## Perzisztens tárolók
 - A docker containerek nem perzisztensek, tehát leállítások esetén a tárolt adatok elvesznek
 - Perzisztens tár becsatolható a konténerekbe
-![sharedvolumes](common/images/shared-volume.jpg)
+![sharedvolumes](../common/images/shared-volume.jpg)
 ## Hálózat
 - A konténerek hálózatot tekintve is izoláltak (net namespace).
 - Egy konténer jellemzően egy hoston futtatott Linux Bridge-hez kapcsolódik.

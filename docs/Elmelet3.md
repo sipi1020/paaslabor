@@ -10,7 +10,7 @@ Ehhez a következő problémákra kell még megoldás:
 
 Az OpenShift ezekre megoldást nyújt, ráépülve a Docker konténer technológiára.
 # OpenShift Origin vs OpenShift Enterprise
-![origin](common/images/openshift_vs_origin.png)
+![origin](../common/images/openshift_vs_origin.png)
 # Alapfogalmak
 -**Container, Image, Registry**: Az OpenShift a Docker-t használja konténer technológiaként ezért ezek pontosan a Docker foglamak.
 -**Pod**: Egy vagy több konténer, közös tárterülettel, hálózattal. Telepítési, maanagement egység.
@@ -19,10 +19,10 @@ Az OpenShift ezekre megoldást nyújt, ráépülve a Docker konténer technológ
 -**Build, BuildConfig**: Egy alkalmazás forráskódjából Docker image készül. Ez a folyamat a Build és ennek a paraméterezése a BuildConfig.
 Az OpenShift alapegységei YAML ill. JSON formátumban is leírhatók. 
 # OpenShift Architektúra
-![origin](common/images/openshift_arch2.png)
+![origin](../common/images/openshift_arch2.png)
 # Alkalmazásfejlesztés
-![s2i](common/images/s2i.png)
-![s2i_2](common/images/s2i_2.png)
+![s2i](../common/images/s2i.png)
+![s2i_2](../common/images/s2i_2.png)
 
 ## Build és ImageStream
 
@@ -48,7 +48,7 @@ oc new-app          --új alkalmazás létrehozása
 
 
 # OpenShift skálázási lehetőségek
-![scaling](common/images/openshift_arch3.png)
+![scaling](../common/images/openshift_arch3.png)
 ## Replication Controller-ek
 Felelősek, hogy mindig a meghatározott számú Pod fusson. Pl. ha leáll egy, akkor indít újat, stb.
 Nem felelős azért, hogy mennyi is ez a Pod szám. Nem figyel forgalmat, terhelést, nem kalkulálja ki ezt a számot.
@@ -59,7 +59,7 @@ A következő hálózati problémákra ad megoldást az OpenShift
 - Összetartozó Docker containerek (Pod-ok) hogyan kommunikáljanak egymással
 - Újrainduló Pod-ok változó IP címeinek lekövetése.
 
-![networking](common/images/openshift_arch.png)
+![networking](../common/images/openshift_arch.png)
 ## Routing
 A fő problémát az jelenti, hogy a különböző Node-okon létrejövő Pod-ok(akár több Docker container-rel)-ban futó alkalmazást, hogyan lehet kívülről elérni, használni.
 A **Service** fogalom egy belső _Port_, ez kívülről még nem érhető el. 
