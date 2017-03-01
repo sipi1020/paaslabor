@@ -90,6 +90,7 @@ Ennek a feladatnak a célja, hogy kipróbáljátok a PaaS-t. Hozzatok létre a p
  
 Javasolt minta: NodeJS vagy Java
 A következőkön haladjatok végig és a megjelölt adatokat gyűjtsétek be a jegyzőkönyvhöz:
+
 1. Hozzatok létre egy alkalmazást a saját useretekkel a Dashboardon (egyszerű legyen, ne perzisztens alkalmazást válasszatok). A kiválasztott Git projektet nézzétek át a github-os linkjén.
 2. Ellenőrizd, hogy böngészőből eléred az alkalmazást és működik-e!
 3. A bemutató alapján nézd végig a Dashboard-on, hogy mik is jöttek létre, milyen információkat látsz.
@@ -100,21 +101,3 @@ _Hint: ezek a parancsok lesznek hasznotokra: oc new-app, docker images, docker i
 
 ### Jegyzőkönyvhöz
 A futó alkalmazás docker container részletes leírását (inspect) másoljátok ki, és majd illesszétek be a jegyzőkönyvbe.
-
-## Feladat 2. - Saját alkalmazás telepítése
-### Célja, leírás
-Ennek a feladatnak a célja, hogy egy saját GitHub account alatti alkalmazást deployoljatok a PaaS-ra.
-
-1. Az előző feladatban létrehozott példa alkalmazás alapján készítsetek a saját GitHub accountok alá egy klónozott forrás struktúrát. Lsd. [itt](Tudnivalok.md)
-   Ezúttal próbálkozhatsz csak CLI parancsok használatával.
-2. Az előző feladatot ismételjétek meg ezzel az új Git URL-el.
-3. Kövesd végig a build és deploy folyamatot (nézd a console-on, vagy a logokat)
-4. Próbáld ki, hogy változtatsz a forráson és újra deployolsz.
-
-_Hint: git parancsok,  oc project, oc projects, oc new-app _
-
-### Jegyzőkönyvhöz
-Itt nincs külön feladat.
-
-## Feladat 3. - POD skálázás
-
