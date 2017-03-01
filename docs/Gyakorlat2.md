@@ -4,7 +4,36 @@
 ## Tudnivalók
 [Fontos információk](Tudnivalok.md)
 
-## Telepített OpenShift áttekintése
+**Fontos:**
+- **Felhasználóneveket a gyakorlatvezető osztjka ki: student1, student2, student3, ..... student25** 
+- Mindenki a saját userét használja ezután, hogy izoláltan dolgozzatok!
+
+
+
+## Telepített OpenShift áttekintése - vezetett bemutató
+### Dashboard
+- Belépés/Kilépés
+- Új projekt létrehozása (projektnév egyedi!)
+-- Javascript példa kiválasztása, Node.js
+-- TryIt Git sample kiválasztása
+-- Advanced részek áttekintése
+- Build folyamat 
+- Deployment folyamat
+- Deployment Config
+- Pod-ok (build és az alkalmazás)
+
+_További dokumentáció: https://docs.openshift.org/latest/welcome/index.html_
+
+```shell
+oc login https://bmepaas-master.openshift.local:8443
+oc project XXXX
+```
+
+
+### oc CLI, fő komponensek
+```shell
+ oc login https://bmepaas-master.openshift.local:8443    
+```
 
 Node-ok:
 ```shell
@@ -55,9 +84,37 @@ oc describe
 oc new-app
 ```
 
-## Feladat 1.
+## Feladat 1. - PaaS minta alkalmazás telepítése
+### Célja, leírás
+Ennek a feladatnak a célja, hogy kipróbáljátok a PaaS-t. Hozzatok létre a projteteken belül egy minta alkalmazást (választhattok technológiát a dashboard-ról).
+ 
+Javasolt minta: NodeJS vagy Java
+A következőkön haladjatok végig és a megjelölt adatokat gyűjtsétek be a jegyzőkönyvhöz:
+1. Hozzatok létre egy alkalmazást a saját useretekkel a Dashboardon (egyszerű legyen, ne perzisztens alkalmazást válasszatok). A kiválasztott Git projektet nézzétek át a github-os linkjén.
+2. Ellenőrizd, hogy böngészőből eléred az alkalmazást és működik-e!
+3. A bemutató alapján nézd végig a Dashboard-on, hogy mik is jöttek létre, milyen információkat látsz.
+4. Ugyanígy nézd át az oc CLI -vel is a projektetd, a POD-od, a service-t.
+4. Derítsd ki, hogy melyik Node-ra (gépre) települt ki és milyen IP-n port-on hallagatózik
+5. Nézd meg az adott Node-on, hogy a Docker-ben milyen container jött létre. 
+_Hint: ezek a parancsok lesznek hasznotokra: oc new-app, docker images, docker inspect, oc get svc stb._
 
+### Jegyzőkönyvhöz
+A futó alkalmazás docker container részletes leírását (inspect) másoljátok ki, és majd illesszétek be a jegyzőkönyvbe.
 
-## Feladat 2.
-## Feladat 3.
-## Feladat 4.
+## Feladat 2. - Saját alkalmazás telepítése
+### Célja, leírás
+Ennek a feladatnak a célja, hogy egy saját GitHub account alatti alkalmazást deployoljatok a PaaS-ra.
+
+1. Az előző feladatban létrehozott példa alkalmazás alapján készítsetek a saját GitHub accountok alá egy klónozott forrás struktúrát. Lsd. [itt](Tudnivalok.md)
+   Ezúttal próbálkozhatsz csak CLI parancsok használatával.
+2. Az előző feladatot ismételjétek meg ezzel az új Git URL-el.
+3. Kövesd végig a build és deploy folyamatot (nézd a console-on, vagy a logokat)
+4. Próbáld ki, hogy változtatsz a forráson és újra deployolsz.
+
+_Hint: git parancsok,  oc project, oc projects, oc new-app _
+
+### Jegyzőkönyvhöz
+Itt nincs külön feladat.
+
+## Feladat 3. - POD skálázás
+

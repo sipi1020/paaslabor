@@ -6,7 +6,7 @@ Egy PaaS teljeskörű és transzparens infrastruktúrán nyújtja az alkalmazás
 A Docker önmagában nem elég ehhez, a következő problémákra kell még megoldás:
 - A különböző konténerek összekapcsolása, management-je fapados, ha csak a Docker-re építkezünk.
 - Nincs megoldva a skálázás, failover, high-availability.
-- Alkalmazás fordítási, deployálási folyamatok támogatása.
+- Alkalmazás buildelési, deployálási folyamatok támogatása.
 
 Ezekre a problémákra vannak megoldások:
 - Kubernetes, Docker Compose, Docker swarm - konténer menedzsment
@@ -35,24 +35,34 @@ Az OpenShift alapegységei YAML ill. JSON formátumban is leírhatók.
 ![s2i](../common/images/s2i.png)
 ![s2i_2](../common/images/s2i_2.png)
 
-## Build és ImageStream
+## Build folyamat
+https://docs.openshift.org/latest/dev_guide/application_lifecycle/new_app.html
+
 Három módon témogatja az alkalmazások buildelését az OpenShift::
 1. Docker: ez gyakorlatilag a Dockerfile alapú buildelési folyamat
 2. S2I -Source to Image: a forráskód és egy Builder docker image alapján lefordítja, összeállítja a végterméket (itt is egy Docker image-et)
 3. Custom build - Teljesen customizált build folyamat, saját Builder image-el.
++1 Pipeline build
+
+A Buildeléshez is Docker containerek jönnek létre! Pl. a megadott forrást egy Java+Maven+Nexus -al konfigurált build container fordítja le.
+
+**BuildConfig**
+A buildelés konfigurációja, többek között leírja, hogy hol a forrás, mi a fordítás eredménye, milyen "stratégia" szerint fordítson stb.
 
 **ImageStream**
 Új image (pl. új verziójú build) elkészülése esetén szükség lehet követő tevékenységekre, pl. automatikus deployra.
 Egy ilyen ImageStream egy nézetet biztosít egy vagy több Docker image-re a címkéken keresztül (pl. cimke a webszerveren, db-n,stb.)
 
-**ImageStreamMapping**
-Ha egy új Image kerül a registry-be, akkor készül egy metadata leíró, egy ImageStreamMapping
 
-## Deployment, DeploymentConfiguration
+**Deployment, DeploymentConfiguration**
+Leírja a telepítési folyamt részleteit.
 
 # OpenShift adminisztráció
 A master node-on fut, amelyet egy floating IP-n keresztül lehet elérni. A host neve nem a központi
 https://bmepaas-master.openshift.local:8443
+
+## Authentikáció és Authorizáció
+
 
 ## OpenShift dashboard
 
