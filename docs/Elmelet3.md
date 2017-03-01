@@ -39,6 +39,7 @@ Az OpenShift alapegységei YAML ill. JSON formátumban is leírhatók.
 https://docs.openshift.org/latest/dev_guide/application_lifecycle/new_app.html
 
 Három módon témogatja az alkalmazások buildelését az OpenShift::
+
 1. Docker: ez gyakorlatilag a Dockerfile alapú buildelési folyamat
 2. S2I -Source to Image: a forráskód és egy Builder docker image alapján lefordítja, összeállítja a végterméket (itt is egy Docker image-et)
 3. Custom build - Teljesen customizált build folyamat, saját Builder image-el.
@@ -47,14 +48,17 @@ Három módon témogatja az alkalmazások buildelését az OpenShift::
 A Buildeléshez is Docker containerek jönnek létre! Pl. a megadott forrást egy Java+Maven+Nexus -al konfigurált build container fordítja le.
 
 **BuildConfig**
+
 A buildelés konfigurációja, többek között leírja, hogy hol a forrás, mi a fordítás eredménye, milyen "stratégia" szerint fordítson stb.
 
 **ImageStream**
+
 Új image (pl. új verziójú build) elkészülése esetén szükség lehet követő tevékenységekre, pl. automatikus deployra.
 Egy ilyen ImageStream egy nézetet biztosít egy vagy több Docker image-re a címkéken keresztül (pl. cimke a webszerveren, db-n,stb.)
 
 
 **Deployment, DeploymentConfiguration**
+
 Leírja a telepítési folyamt részleteit.
 
 # OpenShift adminisztráció
