@@ -85,6 +85,8 @@ oc new-app
 ```
 
 ## Feladat 1. - PaaS minta alkalmazás telepítése
+**Időtartam: 30 perc**
+
 ### Célja, leírás
 Ennek a feladatnak a célja, hogy kipróbáljátok a PaaS-t. Hozzatok létre a projteteken belül egy minta alkalmazást (választhattok technológiát a dashboard-ról).
  

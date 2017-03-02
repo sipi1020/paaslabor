@@ -24,7 +24,9 @@ ip link show
 /usr/share/nginx/html alatt a főoldal
 /etc/init.d/nginx stop|start|restart|status paranccsal lehet leállítani
 
-## Feladat 1. - Docker alapműveletek
+## Feladat 1. - Docker alapműveletek 
+**Időtartam: ~30 perc**
+
 ### Célja, leírás
 Ennek a feladatnak a célja, hogy a legfontosabb Docker parancsokat megismerjétek.
 
@@ -45,7 +47,9 @@ _Hint: ezek a parancsok lesznek hasznotokra: docker search, docker pull, docker 
 ### Jegyzőkönyvhöz
 A jegyzőkönyvhöz másold ki egy text fájlba az utolsó pontban használt parancsot és a kimenetelét!
 
-## Feladat 2.
+## Feladat 2. - Docker www szerver
+**Időtartam: ~30 perc**
+
 ### Célja, leírás
 Ennek a feladatnak a célja, hogy egy futó konténernek valahogy a hasznát is vegyük. 
 A feladat, hogy futtassatok Docker containerben egy web szervert. A host gépen megnyitva egy Firefoxot ezen az URL-en http://localhost írja ki, hogy Hello BME Paas labor!
@@ -61,7 +65,9 @@ _Hint: ezek a parancsok lesznek hasznotokra: docker run -p, stb.
 ### Jegyzőkönyvhöz
 A kulcs parancsokkal együtt egy 2-3 mondatos leírás legyen, hogy hogyan oldottátok meg.
 
-## Feladat 3.
+## Feladat 3. - Docker hálózatok
+**Időtartam: ~20 perc**
+
 ### Célja, leírás
 Futtassuk az előbbi konténert, ami kinyitja a 80-as portot és ellenőrizzük a hálózati működést.
 
@@ -73,16 +79,5 @@ Futtassuk az előbbi konténert, ami kinyitja a 80-as portot és ellenőrizzük 
 6. (Opcionális) Akár több konténert is indíthatsz és az előbbi pontokat megnézheted ismét.
 
 _Hint: ezek a parancsok lesznek hasznotokra: docker network, brctl, ifconfig_
-### Jegyzőkönyvhöz
-Nincs feladat.
-
-## Feladat 4.
-### Célja, leírás
-Ennek a feladatnak a célja, hogy az előbb létrehozott containereket, image-ket takarítsuk ki.
-**Előtte győződj meg róla, hogy minden begyűjtöttél a jegyzőkönyvhöz!**
-
-1. Listázd a futó konténereket és töröld azokat, amiket Te indítottál.
-2. Listázd az image-ket és töröld azokat, amiket Te töltöttél le.
-_Hint: ezek a parancsok lesznek hasznotokra: docker rmi, docker rm, docker rm -v $(docker ps -a -q -f status=exited)_
 ### Jegyzőkönyvhöz
 Nincs feladat.

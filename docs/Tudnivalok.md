@@ -3,6 +3,7 @@
 
 ## VirtualBox CentOS információk
 - VirtualBox-ban indítsd el a CentOS image-et és ebben dolgozz!
+- Innen lehet letölteni: http://ossrv1.aut.bme.hu/student_centos7_v1.ova
 - CentOS Login: **BME Paas user / jelszó: openshift2017**
 - sudo használható (óvatosan azért :))
 - ha szükséged van esetleg a Linuxon valami package-re: sudo yum install -y XXXXXXXX

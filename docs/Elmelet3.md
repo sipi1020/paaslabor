@@ -29,7 +29,7 @@ Az OpenShift ezekre megoldást nyújt, ráépülve a Docker konténer technológ
 Az OpenShift alapegységei YAML ill. JSON formátumban is leírhatók. 
 
 # OpenShift Architektúra
-![origin](../common/images/openshift_arch2.png)
+![openshift_arch](../common/images/openshift_arch2.png)
 
 # Alkalmazásfejlesztés
 ![s2i](../common/images/s2i.png)
@@ -38,37 +38,51 @@ Az OpenShift alapegységei YAML ill. JSON formátumban is leírhatók.
 ## Build folyamat
 https://docs.openshift.org/latest/dev_guide/application_lifecycle/new_app.html
 
-Három módon témogatja az alkalmazások buildelését az OpenShift::
+A következő módon lehet az OpenShift-en alkalmazásokat buildelni:
 
 1. Docker: ez gyakorlatilag a Dockerfile alapú buildelési folyamat
 2. S2I -Source to Image: a forráskód és egy Builder docker image alapján lefordítja, összeállítja a végterméket (itt is egy Docker image-et)
 3. Custom build - Teljesen customizált build folyamat, saját Builder image-el.
-+1 Pipeline build
+4. Jenkins Pipeline build
 
 A Buildeléshez is Docker containerek jönnek létre! Pl. a megadott forrást egy Java+Maven+Nexus -al konfigurált build container fordítja le.
 
 **BuildConfig**
 
-A buildelés konfigurációja, többek között leírja, hogy hol a forrás, mi a fordítás eredménye, milyen "stratégia" szerint fordítson stb.
+A buildelés konfigurációja, többek között leírja, hogy hol a forrás, mi a fordítás eredménye, milyen "stratégia" szerint fordítson, mi triggerelje a fordítást stb.
 
 **ImageStream**
 
-Új image (pl. új verziójú build) elkészülése esetén szükség lehet követő tevékenységekre, pl. automatikus deployra.
+A fordítás eredménye egy Docker Image. Az egymást követő buildek láncolata egy ImageStream.
 Egy ilyen ImageStream egy nézetet biztosít egy vagy több Docker image-re a címkéken keresztül (pl. cimke a webszerveren, db-n,stb.)
 
+### Forrás konvenciók
+A build folyamatokhoz a forrásainknak a nyelvi ill. technológiai standardeket követni kell, pl. Java buildeléshez kell lenni egy pom.xml-nek - Maven build.
+Ezen kívül a buildelési folyamat customizálható több ponton:
+1. Assemble script - az eredménytermék összecsomagolását lehet vele customizálni (pl. zipek, tarok, war-ok, stb.)
+2. Run script - Hogyan kell majd futtatni az előállt eredményterméket.
+3. Save-Artifacts - A build során használt csomagok, libek elmenthetők, hogy ne kelljen minden buildnél az összes - nem változott- függőséget letölteni.
 
-**Deployment, DeploymentConfiguration**
 
-Leírja a telepítési folyamt részleteit.
+
+## Telepítési folyamat
+
+![appflow](../common/images/deploy_flow.png)
+![appflow1](../common/images/deploy_flow1.png)
+
+**DeploymentConfig**
+
+Leírja a telepítési folyamat részleteit.
+
 
 # OpenShift adminisztráció
-A master node-on fut, amelyet egy floating IP-n keresztül lehet elérni. A host neve nem a központi
-https://bmepaas-master.openshift.local:8443
+1. OpenShift dashboard GUI felület: https://bmepaas-master.openshift.local:8443
+2. oc CLI kliens
 
 ## Authentikáció és Authorizáció
+Jelenleg password nélkül be lehet lépni az előírt felhasználónevekkel.
+A CLI OAuth tokennel is használható.
 
-
-## OpenShift dashboard
 
 ## Legfontosabb CLI parancsok
 ```shell
@@ -79,12 +93,11 @@ oc login            --belépés
 oc new-app          --új alkalmazás létrehozása
 ```
 
-
 # OpenShift skálázási lehetőségek
 ![scaling](../common/images/openshift_arch3.png)
 ## Replication Controller-ek
 Felelősek, hogy mindig a meghatározott számú Pod fusson. Pl. ha leáll egy, akkor indít újat, stb.
-Nem felelős azért, hogy mennyi is ez a Pod szám. Nem figyel forgalmat, terhelést, nem kalkulálja ki ezt a számot.
+Nem felelős azért, hogy mennyi is ez a Pod szám. Nem figyel forgalmat, terhelést, nem kalkulálja ki ezt a számot, csak végrehajt.
 
 # OpenShift hálózati kommunikáció
 A következő hálózati problémákra ad megoldást az OpenShift
@@ -95,7 +108,7 @@ A következő hálózati problémákra ad megoldást az OpenShift
 ![networking](../common/images/openshift_arch.png)
 ## Routing
 A fő problémát az jelenti, hogy a különböző Node-okon létrejövő Pod-ok(akár több Docker container-rel)-ban futó alkalmazást, hogyan lehet kívülről elérni, használni.
-A **Service** fogalom egy belső _Port_, ez kívülről még nem érhető el. 
+A **Service** fogalom egy hálózati végpontot reprezentál, ez kívülről még nem érhető el. 
 
 Az OpenShift ezt úgy oldja meg, hogy egy Router komponens segítségével biztosít belépést a külső hívóknak.
 Többféle Router is lehet, mi a HAProxy megoldást vizsgáljuk meg. 
@@ -104,9 +117,9 @@ Az egyes Node-okra kerül egy Router, egy HAProxy, amely fogadja a hálózati fo
 Pl. a :80 -as porton érkező forgalmat a Router a "frontend" címkével rendelkező Service-ek felé irányítja, ahonnan már a megfelelő Pod-ok elérhetőek.
 
 ## Docker containerek közötti kommunikáció
-A Kibernetes oldja meg, hogy egy Pod kap egy belső IP címet, mintha egy különálló Host géo lenne. Ezen a "virtualizált" hoston futnak a Docker containerek így azok képesek
+A Kubernetes oldja meg, hogy egy Pod kap egy belső IP címet, mintha egy különálló Host géo lenne. Ezen a "virtualizált" hoston futnak a Docker containerek így azok képesek
 kommunikálni egymással.
-Pod-ok egymással nem (így) kommunikálnak. Pod-ok más Pod-okkal Service-en keresztül kommunikálnak.
+Pod-ok egymással nem (így) kommunikálnak. Pod-ok más Pod-okkal Service-en keresztül kommunikálhatnak.
 
 ## OpenShift DNS
 

@@ -10,6 +10,8 @@
 
 
 ## Feladat 1. - OpenShift S2I
+**Időtartam: ~30 perc**
+
 ### Célja, leírás
 Ennek a feladatnak a célja, hogy egy saját GitHub account alatti alkalmazást deployoljatok a PaaS-ra.
 
@@ -19,7 +21,7 @@ Ennek a feladatnak a célja, hogy egy saját GitHub account alatti alkalmazást 
 3. Kövesd végig a build és deploy folyamatot (nézd a console-on, vagy a logokat)
 4. Próbáld ki, hogy változtatsz a forráson és újra deployolsz.
 
-_Hint: git parancsok,  oc project, oc projects, oc new-app_
+_Hint: git parancsok,  oc project, oc projects, oc new-app -o json, oc start-build, oc describe build, oc logs -f bc, stb._
 
 ### Jegyzőkönyvhöz
 Itt nincs külön feladat.
