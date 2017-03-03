@@ -19,7 +19,7 @@ Tipikusan alkalmazásszervereket, middleware-ket, alkalmazás futtatókörnyezet
 - **Célcsoport:** alkalmazásfejlesztők
 - **Példák:** OpenShift, Heroku, Google App Engine. Ennél a labornál a PaaS megoldást az OpenShift nyújtja!
 
-BME PaaS dashboard: https://bmepaas-master.openshift.local
+BME PaaS dashboard: https://bmepaas-master.openshift.local:8443
 
 ## SaaS = Software as a Service
 Tipikusan kész alkalmazások, azok szolgáltatásait biztosítja a használói számára (pl. szükségem van egy levelező rendszerre, CRM alkalmazásra, Webshopra stb.)

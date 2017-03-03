@@ -143,6 +143,7 @@ A következő hálózati interfészeket hozza létre Node-onként:
 
 ![networking3](../common/images/network2.png)
 Pod indulása
+
 1. A Docker beköti a containert veth párral az lbr0-ba
 2. Az előbbi átkerül az OVS br0-ba
 3. OpenFlow route szabályok rögzítése az OVS DB-be
