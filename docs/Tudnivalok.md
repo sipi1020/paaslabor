@@ -3,18 +3,19 @@
 
 ## VirtualBox CentOS információk
 - VirtualBox-ban indítsd el a CentOS image-et és ebben dolgozz!
-- Innen lehet letölteni: http://ossrv1.aut.bme.hu/student.ova
+- innen lehet letölteni: http://ossrv1.aut.bme.hu/student.ova
 - CentOS Login: **BME Paas user / jelszó: openshift2017**
 - sudo használható (óvatosan azért :))
 - ha szükséged van esetleg a Linuxon valami package-re: sudo yum install -y XXXXXXXX
 - Firefox a böngésző
 - érdemes beállítani VirtualBox-ban a bidirectional clipboard-ot hogy a copy-paste működjön
-- Ez az anyag elérhető a ~/Labor könyvtár alatt
-- serive-ek statusa, újraindítása pl.: sudo systemctl restart NetworkManager
+- serice-ek statusa, újraindítása pl.: sudo systemctl restart NetworkManager
+- készítsetek magatoknak egy munkakönyvtárat és abban dolgozzatok
 
 ## GitHub
 
 Mindenkinek készítenie kell egy GitHub-os account-ot, vagy a meglévőt használjátok!
+
 1. https://github.com/
 2. Sign Up
 3. username pl. alerantbmexy, stb...., meg kell erősíteni a regisztrációt emailben kapott linken
@@ -46,8 +47,6 @@ git commit -a -m 'Some commit message'
 git push origin master
 ```
 Ekkor a saját GitHub URL alapján már lehet saját kódbázison új proktet létrehozni.
-
-
 
 Ilyen a könvítárstruktúra:
 ```shell
@@ -92,9 +91,10 @@ dnsmasq config fájl: /etc/NetworkManager/dnsmasq.d
 - OpenShift dashboard: https://bmepaas-master.openshift.local:8443
 - Node1 gépen nézelődés: ssh student@bmepaas-node1.openshift.local (jelszó: student)
 - Node2 gépen nézelődés: ssh student@bmepaas-node2.openshift.local (jelszó: student)
+
 **Node1, Node2 gépeken csak a readonly docker parancsokat használd!!!**
 
 
 ## Jegyzőkönyv
 
-**A jegyzőkönyvhöz menet közben gyűjtsd az anyagokat (külön jelölve van, hogy mikor mit), hogy a végén meglegyen minden.**
+**A jegyzőkönyvhöz menet közben gyűjtsd az anyagokat (külön jelölve van, hogy mikor mit), hogy a kitöltésnél már minden infó meglegyen.**

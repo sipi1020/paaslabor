@@ -1,6 +1,6 @@
 # Alerant - BME PaaS labor
 ## Tudnivalók
-**Oktató:** Nagy Zoltán,Alerant Informatikai Zrt. (+36306803846, nagy.zoltan@alerant.hu)
+**Oktató:** Nagy Zoltán, Alerant Informatikai Zrt. (+36306803846, nagy.zoltan@alerant.hu)
 
 **Labor email elérhetőség:** alerant.bme.paas.labor@gmail.com
 
@@ -10,7 +10,10 @@
 Az értékelés/érdemjegy alapja, mindenki töltse ki és küldje el az email címével.
 A jegyzőkönyvben tesztkérdések és a gyakorlatok anyagaiból felmásolandó feladatok is vannak. Érdemes menet közben tölteni és egy külön dokumentumban külön is tárolni, nehogy elvesszen!
  
-[A jegyzőkönyvet itt töltsétek](https://goo.gl/forms/rKN2WAWNCjxpBulS2)
+[A jegyzőkönyvet itt töltsétek ki](https://goo.gl/forms/rKN2WAWNCjxpBulS2)
+
+**A jegyzőkönyvet a labor napján küldjétek be! Az opcionális feladatok beadásának határideje a labor napja +2hét.**
+
 ---
 # Célkitűzés, tematika
 A labor célja a következő témák áttekintése:

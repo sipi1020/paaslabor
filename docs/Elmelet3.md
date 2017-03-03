@@ -59,6 +59,7 @@ Egy ilyen ImageStream egy nézetet biztosít egy vagy több Docker image-re a c�
 ### Forrás konvenciók
 A build folyamatokhoz a forrásainknak a nyelvi ill. technológiai standardeket követni kell, pl. Java buildeléshez kell lenni egy pom.xml-nek - Maven build.
 Ezen kívül a buildelési folyamat customizálható több ponton:
+
 1. Assemble script - az eredménytermék összecsomagolását lehet vele customizálni (pl. zipek, tarok, war-ok, stb.)
 2. Run script - Hogyan kell majd futtatni az előállt eredményterméket.
 3. Save-Artifacts - A build során használt csomagok, libek elmenthetők, hogy ne kelljen minden buildnél az összes - nem változott- függőséget letölteni.
@@ -146,7 +147,8 @@ Pod indulása
 2. Az előbbi átkerül az OVS br0-ba
 3. OpenFlow route szabályok rögzítése az OVS DB-be
 
-Példa hívási lánc: i
+Példa hívási lánc: 
+
 1. A és B konténer egy hoston van: A(eth0,vethA)-B(eth0,vethB)
 A->eth0->vethA->br0->vethB->eth0->B
 2. A és B konténer más hoston van: A(eth0,vethA)-B(eth0,vethB)
