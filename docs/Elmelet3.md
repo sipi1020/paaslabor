@@ -108,7 +108,7 @@ A következő hálózati problémákra ad megoldást az OpenShift
 ![networking](../common/images/openshift_arch.png)
 ## Routing
 A fő problémát az jelenti, hogy a különböző Node-okon létrejövő Pod-ok(akár több Docker container-rel)-ban futó alkalmazást, hogyan lehet kívülről elérni, használni.
-A **Service** fogalom egy hálózati végpontot reprezentál, ez kívülről még nem érhető el. 
+A **Service** fogalom egy hálózati végpontot reprezentál, ez kívülről még nem érhető el. A Service egy "stabil" IP port (nem egy belső docker által osztott port), amelyen elérhető akár több POD által is nyújtott szolgáltatás (loadbalancer)
 
 Az OpenShift ezt úgy oldja meg, hogy egy Router komponens segítségével biztosít belépést a külső hívóknak.
 Többféle Router is lehet, mi a HAProxy megoldást vizsgáljuk meg. 
