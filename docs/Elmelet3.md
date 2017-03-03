@@ -121,6 +121,41 @@ A Kubernetes oldja meg, hogy egy Pod kap egy belső IP címet, mintha egy külö
 kommunikálni egymással.
 Pod-ok egymással nem (így) kommunikálnak. Pod-ok más Pod-okkal Service-en keresztül kommunikálhatnak.
 
-## OpenShift DNS
+## OpenShift SDN
+
+https://docs.openshift.com/enterprise/3.0/architecture/additional_concepts/sdn.html#architecture-additional-concepts-sdn
+
+- Open vSwitch alapú megoldás
+- Az OpenShift a Pod-okat egy cluster network-be szervezni (etcd-ben regisztrált alhálózatok): 10.1.0.0/16
+- Node-onként alhálózatok: 10.1.0.0/24, 10.1.1.0/24,... (256 db alhálózat)
+- VNID használat multitenant megoldásoknál
+
+A következő hálózati interfészeket hozza létre Node-onként:
+1. br0 - OVS bridge, a Pod-ok ehhez kapcsolódnak (veth párokkal)
+- tun0 - OVS port a br0-n az external network felé, Pod-ok default gateway (IP tables, NAT)
+- vovsbr - Docker containerek felé
+- vxlan0 - Internet felé, Remote container hozzáférésekhez
+2. lbr0 - Docker Bridge, a Docker containerek ehhez kapcsolódnak (veth)
+-  vlinuxbr - Linux peer virtual Ethernet - Docker containerek eléréséhez
+
+![networking2](../common/images/network.jpg)
+
+Pod indulása
+1. A Docker beköti a containert veth párral az lbr0-ba
+2. Az előbbi átkerül az OVS br0-ba
+3. OpenFlow route szabályok rögzítése az OVS DB-be
+
+Példa hívási lánc: i
+1. A és B konténer egy hoston van: A(eth0,vethA)-B(eth0,vethB)
+A->eth0->vethA->br0->vethB->eth0->B
+2. A és B konténer más hoston van: A(eth0,vethA)-B(eth0,vethB)
+A->eth0->vethA->br0->vxlan0->br0->vethB->eth0->B
+3. A és B konténer más hoston van, B pl. egy internetes cím: A(eth0,vethA)
+A->eth0->vethA->br0->tun0->...->eth0->B
+
+
+
+
+
 
 
