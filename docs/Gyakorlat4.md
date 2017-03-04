@@ -1,4 +1,3 @@
-# Alerant - BME PaaS labor 
 # Gyakorlat 4. - Hálózat
 
 ## Tudnivalók
