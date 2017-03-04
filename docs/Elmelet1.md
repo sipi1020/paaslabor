@@ -1,4 +1,3 @@
-# Alerant - BME PaaS labor
 # IaaS, PaaS, SaaS
 ![XaaS](../common/images/xaas.jpg)
 ## IaaS = Infrastructure as a Service
