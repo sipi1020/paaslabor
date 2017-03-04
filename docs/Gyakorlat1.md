@@ -24,6 +24,8 @@ ip link show
 /usr/share/nginx/html alatt a főoldal
 /etc/init.d/nginx stop|start|restart|status paranccsal lehet leállítani
 
+---
+
 ## Feladat 1. - Docker alapműveletek 
 **Időtartam: ~30 perc**
 
@@ -34,15 +36,13 @@ Ennek a feladatnak a célja, hogy a legfontosabb Docker parancsokat megismerjét
 2. Nézd meg milyen image-ek vannak már lehúzva a helyi registry-be.
 3. Húzz le egy cirros image-et. Próbáld ki az image keresést is. (docker.io/cirros)
 4. Indítsd el az előbbi cirros image-ből készített container-t
-
-4.1 Lépj be rá egy terminálba /bin/sh shell-be és győződj meg róla, hogy valóban egy izolált containerben vagy!
-4.2 Hasonlítsd össze a futó processzeket a containerben és a host gépen.
+  1. Lépj be rá egy terminálba /bin/sh shell-be és győződj meg róla, hogy valóban egy izolált containerben vagy!
+  2 Hasonlítsd össze a futó processzeket a containerben és a host gépen.
 5. Ellenőrizd a következőket a futó containerben
-
-5.1 Mi a container host neve?
-5.2 Milyen nameserver van beállítva?
-5.3 Milyen hálózati interfészek vannak? Mi a gateway? Milyen IP-t kapott?
-5.4 Milyen a routing table?
+  1. Mi a container host neve?
+  2. Milyen nameserver van beállítva?
+  3. Milyen hálózati interfészek vannak? Mi a gateway? Milyen IP-t kapott?
+  4. Milyen a routing table?
 6. Fusson a cirros konténer és nyomozd ki, hogy milyen MAC address-t kapott!
 
 _Hint: ezek a parancsok lesznek hasznotokra: docker search, docker pull, docker run -it, docker ps, netstat -nr, stb...._
