@@ -1,4 +1,3 @@
-# Alerant - BME PaaS labor
 # OpenShift áttekintés
 A Docker konténerek önmagukban még nem alkalmasak arra, hogy egy teljes PaaS megoldást nyújtsanak.
 Egy PaaS teljeskörű és transzparens infrastruktúrán nyújtja az alkalmazásfejlesztési platformot.
