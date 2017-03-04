@@ -1,6 +1,7 @@
-# Alerant - BME PaaS labor
+![alerantlogo](http://alerant.hu/img/logo.svg) 
+# BME PaaS labor 
 ## Tudnivalók
-**Oktató:** Nagy Zoltán, Alerant Informatikai Zrt. (+36306803846, nagy.zoltan@alerant.hu)
+**Oktató:** Nagy Zoltán, [Alerant Informatikai Zrt.](http://alerant.hu)
 
 **Labor email elérhetőség:** alerant.bme.paas.labor@gmail.com
 
