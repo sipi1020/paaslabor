@@ -1,4 +1,3 @@
-# Alerant - BME PaaS labor 
 # Tudnivalók
 
 ## VirtualBox CentOS információk
