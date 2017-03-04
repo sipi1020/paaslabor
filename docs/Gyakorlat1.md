@@ -1,5 +1,3 @@
-![alerantlogo](http://alerant.hu/img/logo.svg) 
-# BME PaaS labor 
 # Gyakorlat 1. - Docker
 
 ## Tudnivalók
