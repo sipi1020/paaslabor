@@ -1,4 +1,5 @@
-# Alerant - BME PaaS labor 
+![alerantlogo](http://alerant.hu/img/logo.svg) 
+# BME PaaS labor 
 # Gyakorlat 1. - Docker
 
 ## Tudnivalók
@@ -49,6 +50,8 @@ _Hint: ezek a parancsok lesznek hasznotokra: docker search, docker pull, docker 
 ### Jegyzőkönyvhöz
 A jegyzőkönyvhöz másold ki egy text fájlba az utolsó pontban használt parancsot és a kimenetelét!
 
+---
+
 ## Feladat 2. - Docker www szerver
 **Időtartam: ~30 perc**
 
@@ -63,9 +66,11 @@ A következőket biztosan meg kell oldani:
 2. Figyeljétek meg a konténer státuszát! élettartamát! Ha megváltoztattok benne pl. egy index.html-et és leállítjátok, akkor következő indításnál már nem lesz ott.
 3. (Opcionális) Esetleg köteg becsatolással is megoldható (docker run -v ...).
 
-_Hint: ezek a parancsok lesznek hasznotokra: docker run -p, stb.
+_Hint: ezek a parancsok lesznek hasznotokra: docker run -p, stb._
 ### Jegyzőkönyvhöz
 A kulcs parancsokkal együtt egy 2-3 mondatos leírás legyen, hogy hogyan oldottátok meg.
+
+---
 
 ## Feladat 3. - Docker hálózatok
 **Időtartam: ~20 perc**
