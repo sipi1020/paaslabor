@@ -1,4 +1,5 @@
-# Alerant - BME PaaS labor 
+![alerantlogo](http://alerant.hu/img/logo.svg) 
+# BME PaaS labor
 # Gyakorlat 2. - OpenShift áttekintés
 
 ## Tudnivalók
