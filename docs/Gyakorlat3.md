@@ -1,4 +1,3 @@
-# Alerant - BME PaaS labor 
 # Gyakorlat 3. - OpenShift S2I
 
 ## Tudnivalók
