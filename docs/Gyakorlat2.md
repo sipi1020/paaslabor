@@ -13,9 +13,9 @@
 ### Dashboard
 - Belépés/Kilépés
 - Új projekt létrehozása (projektnév egyedi!)
--- Javascript példa kiválasztása, Node.js
--- TryIt Git sample kiválasztása
--- Advanced részek áttekintése
+  - Javascript példa kiválasztása, Node.js
+  - TryIt Git sample kiválasztása
+  - Advanced részek áttekintése
 - Build folyamat 
 - Deployment folyamat
 - Deployment Config
