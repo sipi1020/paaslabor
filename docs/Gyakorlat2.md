@@ -4,7 +4,7 @@
 [Fontos információk](Tudnivalok.md)
 
 **Fontos:**
-- **Felhasználóneveket a gyakorlatvezető osztjka ki: student1, student2, student3, ..... student25** 
+- **Felhasználóneveket a gyakorlatvezető osztja ki: student1, student2,...,student25** 
 - Mindenki a saját userét használja ezután, hogy izoláltan dolgozzatok!
 
 
