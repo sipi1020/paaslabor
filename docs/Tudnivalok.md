@@ -6,6 +6,7 @@
 - CentOS Login: **BME Paas user / jelszó: openshift2017**
 - sudo használható (óvatosan azért :))
 - ha szükséged van esetleg a Linuxon valami package-re: sudo yum install -y XXXXXXXX
+- host gép könyvtárának mountolása: 1. hozz létre a VirtualBox-ban Devices/Shared Folders -ben egy foldert pl. host néven, majd a CentOS-ben ezt mountolhatod: sudo mount -t vboxsf host /media  (host a share neve)
 - Firefox a böngésző
 - érdemes beállítani VirtualBox-ban a bidirectional clipboard-ot hogy a copy-paste működjön
 - serice-ek statusa, újraindítása pl.: sudo systemctl restart NetworkManager
