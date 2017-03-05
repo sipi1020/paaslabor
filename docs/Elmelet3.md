@@ -1,16 +1,17 @@
 # OpenShift áttekintés
 A Docker konténerek önmagukban még nem alkalmasak arra, hogy egy teljes PaaS megoldást nyújtsanak.
-Egy PaaS teljeskörű és transzparens infrastruktúrán nyújtja az alkalmazásfejlesztési platformot.
+Egy PaaS teljeskörű és transzparens infrastruktúrán nyújtja az alkalmazásfuttatási platformot.
 
-A Docker önmagában nem elég ehhez, a következő problémákra kell még megoldás:
+A következő problémákra kell még megoldás:
 - A különböző konténerek összekapcsolása, management-je fapados, ha csak a Docker-re építkezünk.
-- Nincs megoldva a skálázás, failover, high-availability.
+- Nincs megoldva a skálázás(akár dinamikusan), failover, high-availability.
 - Alkalmazás buildelési, deployálási folyamatok támogatása.
+- Tenant/Project izoláció.
 
 Ezekre a problémákra vannak megoldások:
 - Kubernetes, Docker Compose, Docker swarm - konténer menedzsment
 - Alkalmazásfejlesztési módszertanok, eszközök: Git vagy más SCM, Jenkins,...
-- Hálózati eszközök: OvSwitch, Linux kernel technológiák
+- Hálózati eszközök: Open vSwitch, Linux kernel technológiák
 
 Az OpenShift ezekre megoldást nyújt, ráépülve a Docker konténer technológiára és más bevált eszközökre.
 
@@ -31,7 +32,6 @@ Az OpenShift alapegységei YAML ill. JSON formátumban is leírhatók.
 ![openshift_arch](../common/images/openshift_arch2.png)
 
 # Alkalmazásfejlesztés
-![s2i](../common/images/s2i.png)
 ![s2i_2](../common/images/s2i_2.png)
 
 ## Build folyamat
