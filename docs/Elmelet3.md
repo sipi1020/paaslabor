@@ -93,12 +93,6 @@ oc login            --belépés
 oc new-app          --új alkalmazás létrehozása
 ```
 
-# OpenShift skálázási lehetőségek
-![scaling](../common/images/openshift_arch3.png)
-## Replication Controller-ek
-Felelősek, hogy mindig a meghatározott számú Pod fusson. Pl. ha leáll egy, akkor indít újat, stb.
-Nem felelős azért, hogy mennyi is ez a Pod szám. Nem figyel forgalmat, terhelést, nem kalkulálja ki ezt a számot, csak végrehajt.
-
 # OpenShift hálózati kommunikáció
 A következő hálózati problémákra ad megoldást az OpenShift
 - Routing: hogyan érhetőek el kívülről az alkalmazásaink
@@ -155,9 +149,14 @@ A->eth0->vethA->br0->vxlan0->br0->vethB->eth0->B
 3. A és B konténer más hoston van, B pl. egy internetes cím: A(eth0,vethA)
 A->eth0->vethA->br0->tun0->...->eth0->B
 
+# OpenShift skálázási lehetőségek
+![scaling](../common/images/openshift_arch3.png)
+## Replication Controller-ek
+Felelősek, hogy mindig a meghatározott számú Pod fusson. Pl. ha leáll egy, akkor indít újat, stb.
+Nem felelős azért, hogy mennyi is ez a Pod szám. Nem figyel forgalmat, terhelést, nem kalkulálja ki ezt a számot, csak végrehajt.
 
-
-
+## Autoscaling
+A Pod-ok erőforrás igényei alapján automatikus skálázás is lehetséges.
 
 
 
