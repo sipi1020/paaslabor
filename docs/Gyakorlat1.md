@@ -42,11 +42,11 @@ Ennek a feladatnak a célja, hogy a legfontosabb Docker parancsokat megismerjét
   2. Milyen nameserver van beállítva?
   3. Milyen hálózati interfészek vannak? Mi a gateway? Milyen IP-t kapott?
   4. Milyen a routing table?
-6. Fusson a cirros konténer és nyomozd ki, hogy milyen MAC address-t kapott!
+6. Fusson a cirros konténer és nyomozd ki, hogy a host gépen melyik fájlban tárolódik a container "/etc/hostname" fájlja!
 
-_Hint: ezek a parancsok lesznek hasznotokra: docker search, docker pull, docker run -it, docker ps, netstat -nr, stb...._
+_Hint: ezek a parancsok lesznek hasznotokra: docker search, docker pull, docker run -it, docker ps, netstat -nr, docker inspect stb._
 ### Jegyzőkönyvhöz
-A jegyzőkönyvhöz másold ki egy text fájlba az utolsó pontban használt parancsot és a kimenetelét!
+A jegyzőkönyvhöz másold ki egy text fájlba az utolsó pontra adott választ ill. hogy milyen paranccsal jöttél rá!
 
 ---
 
