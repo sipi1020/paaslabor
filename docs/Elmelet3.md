@@ -104,6 +104,13 @@ A következő hálózati problémákra ad megoldást az OpenShift
 A fő problémát az jelenti, hogy a különböző Node-okon létrejövő Pod-ok(akár több Docker container-rel)-ban futó alkalmazást, hogyan lehet kívülről elérni, használni.
 A **Service** fogalom egy hálózati végpontot reprezentál, ez kívülről még nem érhető el. A Service egy "stabil" IP port (nem egy belső docker által osztott port), amelyen elérhető akár több POD által is nyújtott szolgáltatás (loadbalancer)
 
+**Service**
+
+- A service nem kötődik konkrét POD-hoz(hiszen az dinamikusan változhat), hanem ún. selector-ral lehet POD-ok címkéire hivatkozni
+- Egy POD egy másik POD-dal Service-en keresztül kommunikálhat egy projekten belül.
+- A projekten belüli POD-ok konténereiben környezeti változók jönnek létre az egyes Service-ekhez: SVC_NAME_SERVICE_ADDRESS, _PORT
+- A belső DNS alapján is feldoldhatják a Service-ek host neveit: SVC_NAME.PROJECT_NAME.svc.cluster.local
+
 Az OpenShift ezt úgy oldja meg, hogy egy Router komponens segítségével biztosít belépést a külső hívóknak.
 Többféle Router is lehet, mi a HAProxy megoldást vizsgáljuk meg. 
 
