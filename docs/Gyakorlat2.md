@@ -4,7 +4,9 @@
 [Fontos információk](Tudnivalok.md)
 
 **Fontos:**
-- **Felhasználóneveket a gyakorlatvezető osztja ki: student1, student2,...,student25** 
+- OpenShift konvenviók:
+ - Felhasználónevetek legyen: studentXY - ahol X Y a nevetek kezdőbetűi pl. studentNZ
+ - Projektek nevei: gyakorlatNXY - N a gyakorlat száma, X, Y lsd. előbb, pl. gyakorlat2NZ
 - Mindenki a saját userét használja ezután, hogy izoláltan dolgozzatok!
 
 
