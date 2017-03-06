@@ -1,11 +1,12 @@
-# Alerant - BME PaaS labor 
 # Gyakorlat 2. - OpenShift áttekintés
 
 ## Tudnivalók
 [Fontos információk](Tudnivalok.md)
 
 **Fontos:**
-- **Felhasználóneveket a gyakorlatvezető osztjka ki: student1, student2, student3, ..... student25** 
+- OpenShift konvenviók:
+ - Felhasználónevetek legyen: studentxy - ahol x y a nevetek kezdőbetűi pl. studentnz (kisbetűk)
+ - Projektek nevei: gyakorlatNxy - N a gyakorlat száma, x, y lsd. előbb, pl. gyakorlat2nz (kisbetűk)
 - Mindenki a saját userét használja ezután, hogy izoláltan dolgozzatok!
 
 
@@ -14,9 +15,9 @@
 ### Dashboard
 - Belépés/Kilépés
 - Új projekt létrehozása (projektnév egyedi!)
--- Javascript példa kiválasztása, Node.js
--- TryIt Git sample kiválasztása
--- Advanced részek áttekintése
+  - Javascript példa kiválasztása, Node.js
+  - TryIt Git sample kiválasztása
+  - Advanced részek áttekintése
 - Build folyamat 
 - Deployment folyamat
 - Deployment Config
@@ -88,7 +89,7 @@ oc new-app
 **Időtartam: 30 perc**
 
 ### Célja, leírás
-Ennek a feladatnak a célja, hogy kipróbáljátok a PaaS-t. Hozzatok létre a projteteken belül egy minta alkalmazást (választhattok technológiát a dashboard-ról).
+Ennek a feladatnak a célja, hogy kipróbáljátok a PaaS-t. Hozzatok létre a projekteteken belül egy minta alkalmazást (választhattok technológiát a dashboard-ról).
  
 Javasolt minta: NodeJS vagy Java
 A következőkön haladjatok végig és a megjelölt adatokat gyűjtsétek be a jegyzőkönyvhöz:
@@ -97,8 +98,9 @@ A következőkön haladjatok végig és a megjelölt adatokat gyűjtsétek be a 
 2. Ellenőrizd, hogy böngészőből eléred az alkalmazást és működik-e!
 3. A bemutató alapján nézd végig a Dashboard-on, hogy mik is jöttek létre, milyen információkat látsz.
 4. Ugyanígy nézd át az oc CLI -vel is a projektetd, a POD-od, a service-t.
-4. Derítsd ki, hogy melyik Node-ra (gépre) települt ki és milyen IP-n port-on hallagatózik
-5. Nézd meg az adott Node-on, hogy a Docker-ben milyen container jött létre. 
+5. Derítsd ki, hogy melyik Node-ra (gépre) települt ki és milyen IP-n port-on hallagatózik
+6. Nézd meg az adott Node-on, hogy a Docker-ben milyen container jött létre. 
+
 _Hint: ezek a parancsok lesznek hasznotokra: oc new-app, docker images, docker inspect, oc get svc stb._
 
 ### Jegyzőkönyvhöz

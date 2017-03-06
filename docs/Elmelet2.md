@@ -1,4 +1,3 @@
-# Alerant - BME PaaS labor
 # Docker
 ## Konténerek
 - LXC, BSD Jails, Docker

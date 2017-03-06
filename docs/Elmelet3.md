@@ -1,17 +1,17 @@
-# Alerant - BME PaaS labor
 # OpenShift áttekintés
 A Docker konténerek önmagukban még nem alkalmasak arra, hogy egy teljes PaaS megoldást nyújtsanak.
-Egy PaaS teljeskörű és transzparens infrastruktúrán nyújtja az alkalmazásfejlesztési platformot.
+Egy PaaS teljeskörű és transzparens infrastruktúrán nyújtja az alkalmazásfuttatási platformot.
 
-A Docker önmagában nem elég ehhez, a következő problémákra kell még megoldás:
+A következő problémákra kell még megoldás:
 - A különböző konténerek összekapcsolása, management-je fapados, ha csak a Docker-re építkezünk.
-- Nincs megoldva a skálázás, failover, high-availability.
+- Nincs megoldva a skálázás(akár dinamikusan), failover, high-availability.
 - Alkalmazás buildelési, deployálási folyamatok támogatása.
+- Tenant/Project izoláció.
 
 Ezekre a problémákra vannak megoldások:
 - Kubernetes, Docker Compose, Docker swarm - konténer menedzsment
 - Alkalmazásfejlesztési módszertanok, eszközök: Git vagy más SCM, Jenkins,...
-- Hálózati eszközök: OvSwitch, Linux kernel technológiák
+- Hálózati eszközök: Open vSwitch, Linux kernel technológiák
 
 Az OpenShift ezekre megoldást nyújt, ráépülve a Docker konténer technológiára és más bevált eszközökre.
 
@@ -32,7 +32,6 @@ Az OpenShift alapegységei YAML ill. JSON formátumban is leírhatók.
 ![openshift_arch](../common/images/openshift_arch2.png)
 
 # Alkalmazásfejlesztés
-![s2i](../common/images/s2i.png)
 ![s2i_2](../common/images/s2i_2.png)
 
 ## Build folyamat
@@ -94,12 +93,6 @@ oc login            --belépés
 oc new-app          --új alkalmazás létrehozása
 ```
 
-# OpenShift skálázási lehetőségek
-![scaling](../common/images/openshift_arch3.png)
-## Replication Controller-ek
-Felelősek, hogy mindig a meghatározott számú Pod fusson. Pl. ha leáll egy, akkor indít újat, stb.
-Nem felelős azért, hogy mennyi is ez a Pod szám. Nem figyel forgalmat, terhelést, nem kalkulálja ki ezt a számot, csak végrehajt.
-
 # OpenShift hálózati kommunikáció
 A következő hálózati problémákra ad megoldást az OpenShift
 - Routing: hogyan érhetőek el kívülről az alkalmazásaink
@@ -110,6 +103,13 @@ A következő hálózati problémákra ad megoldást az OpenShift
 ## Routing
 A fő problémát az jelenti, hogy a különböző Node-okon létrejövő Pod-ok(akár több Docker container-rel)-ban futó alkalmazást, hogyan lehet kívülről elérni, használni.
 A **Service** fogalom egy hálózati végpontot reprezentál, ez kívülről még nem érhető el. A Service egy "stabil" IP port (nem egy belső docker által osztott port), amelyen elérhető akár több POD által is nyújtott szolgáltatás (loadbalancer)
+
+**Service**
+
+- A service nem kötődik konkrét POD-hoz(hiszen az dinamikusan változhat), hanem ún. selector-ral lehet POD-ok címkéire hivatkozni
+- Egy POD egy másik POD-dal Service-en keresztül kommunikálhat egy projekten belül.
+- A projekten belüli POD-ok konténereiben környezeti változók jönnek létre az egyes Service-ekhez: SVC_NAME_SERVICE_ADDRESS, _PORT
+- A belső DNS alapján is feldoldhatják a Service-ek host neveit: SVC_NAME.PROJECT_NAME.svc.cluster.local
 
 Az OpenShift ezt úgy oldja meg, hogy egy Router komponens segítségével biztosít belépést a külső hívóknak.
 Többféle Router is lehet, mi a HAProxy megoldást vizsgáljuk meg. 
@@ -157,9 +157,14 @@ A->eth0->vethA->br0->vxlan0->br0->vethB->eth0->B
 3. A és B konténer más hoston van, B pl. egy internetes cím: A(eth0,vethA)
 A->eth0->vethA->br0->tun0->...->eth0->B
 
+# OpenShift skálázási lehetőségek
+![scaling](../common/images/openshift_arch3.png)
+## Replication Controller-ek
+Felelősek, hogy mindig a meghatározott számú Pod fusson. Pl. ha leáll egy, akkor indít újat, stb.
+Nem felelős azért, hogy mennyi is ez a Pod szám. Nem figyel forgalmat, terhelést, nem kalkulálja ki ezt a számot, csak végrehajt.
 
-
-
+## Autoscaling
+A Pod-ok erőforrás igényei alapján automatikus skálázás is lehetséges.
 
 
 

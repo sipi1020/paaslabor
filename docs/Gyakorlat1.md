@@ -1,4 +1,3 @@
-# Alerant - BME PaaS labor 
 # Gyakorlat 1. - Docker
 
 ## Tudnivalók
@@ -24,6 +23,8 @@ ip link show
 /usr/share/nginx/html alatt a főoldal
 /etc/init.d/nginx stop|start|restart|status paranccsal lehet leállítani
 
+---
+
 ## Feladat 1. - Docker alapműveletek 
 **Időtartam: ~30 perc**
 
@@ -34,18 +35,20 @@ Ennek a feladatnak a célja, hogy a legfontosabb Docker parancsokat megismerjét
 2. Nézd meg milyen image-ek vannak már lehúzva a helyi registry-be.
 3. Húzz le egy cirros image-et. Próbáld ki az image keresést is. (docker.io/cirros)
 4. Indítsd el az előbbi cirros image-ből készített container-t
-4.1 Lépj be rá egy terminálba /bin/sh shell-be és győződj meg róla, hogy valóban egy izolált containerben vagy!
-4.2 Hasonlítsd össze a futó processzeket a containerben és a host gépen.
+  1. Lépj be rá egy terminálba /bin/sh shell-be és győződj meg róla, hogy valóban egy izolált containerben vagy!
+  2 Hasonlítsd össze a futó processzeket a containerben és a host gépen.
 5. Ellenőrizd a következőket a futó containerben
-5.1 Mi a container host neve?
-5.2 Milyen nameserver van beállítva?
-5.3 Milyen hálózati interfészek vannak? Mi a gateway? Milyen IP-t kapott?
-5.4 Milyen a routing table?
-6. Fusson a cirros konténer és nyomozd ki, hogy milyen MAC address-t kapott!
+  1. Mi a container host neve?
+  2. Milyen nameserver van beállítva?
+  3. Milyen hálózati interfészek vannak? Mi a gateway? Milyen IP-t kapott?
+  4. Milyen a routing table?
+6. Fusson a cirros konténer és nyomozd ki, hogy a host gépen melyik fájlban tárolódik a container "/etc/hostname" fájlja!
 
-_Hint: ezek a parancsok lesznek hasznotokra: docker search, docker pull, docker run -it, docker ps, netstat -nr, stb...._
+_Hint: ezek a parancsok lesznek hasznotokra: docker search, docker pull, docker run -it, docker ps, netstat -nr, docker inspect stb._
 ### Jegyzőkönyvhöz
-A jegyzőkönyvhöz másold ki egy text fájlba az utolsó pontban használt parancsot és a kimenetelét!
+A jegyzőkönyvhöz másold ki egy text fájlba az utolsó pontra adott választ ill. hogy milyen paranccsal jöttél rá!
+
+---
 
 ## Feladat 2. - Docker www szerver
 **Időtartam: ~30 perc**
@@ -61,9 +64,11 @@ A következőket biztosan meg kell oldani:
 2. Figyeljétek meg a konténer státuszát! élettartamát! Ha megváltoztattok benne pl. egy index.html-et és leállítjátok, akkor következő indításnál már nem lesz ott.
 3. (Opcionális) Esetleg köteg becsatolással is megoldható (docker run -v ...).
 
-_Hint: ezek a parancsok lesznek hasznotokra: docker run -p, stb.
+_Hint: ezek a parancsok lesznek hasznotokra: docker run -p, stb._
 ### Jegyzőkönyvhöz
 A kulcs parancsokkal együtt egy 2-3 mondatos leírás legyen, hogy hogyan oldottátok meg.
+
+---
 
 ## Feladat 3. - Docker hálózatok
 **Időtartam: ~20 perc**
