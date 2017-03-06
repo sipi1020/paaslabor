@@ -5,8 +5,8 @@
 
 **Fontos:**
 - OpenShift konvenviók:
- - Felhasználónevetek legyen: studentXY - ahol X Y a nevetek kezdőbetűi pl. studentNZ
- - Projektek nevei: gyakorlatNXY - N a gyakorlat száma, X, Y lsd. előbb, pl. gyakorlat2NZ
+ - Felhasználónevetek legyen: studentxy - ahol x y a nevetek kezdőbetűi pl. studentnz (kisbetűk)
+ - Projektek nevei: gyakorlatNxy - N a gyakorlat száma, x, y lsd. előbb, pl. gyakorlat2nz (kisbetűk)
 - Mindenki a saját userét használja ezután, hogy izoláltan dolgozzatok!
 
 
