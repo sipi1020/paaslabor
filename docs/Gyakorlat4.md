@@ -4,11 +4,13 @@
 [Fontos információk](Tudnivalok.md)
 
 **Fontos:**
-- **Felhasználóneveket a gyakorlatvezető osztjka ki: student1, student2,...,student25** 
+- OpenShift konvenviók:
+ - Felhasználónevetek legyen: studentxy - ahol x y a nevetek kezdőbetűi pl. studentnz (kisbetűk)
+ - Projektek nevei: gyakorlatNxy - N a gyakorlat száma, x, y lsd. előbb, pl. gyakorlat2nz (kisbetűk)
 - Mindenki a saját userét használja ezután, hogy izoláltan dolgozzatok!
 
 
-## Feladat 1. - OpenShift SDN hálózati forgalom mérése, External -> ... -> Alkalmazás
+## Feladat 1. - OpenShift SDN hálózati forgalom mérése
 **Időtartam: ~30 perc**
 
 ### Célja, leírás
