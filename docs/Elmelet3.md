@@ -162,9 +162,12 @@ A->eth0->vethA->br0->tun0->...->eth0->B
 ## Replication Controller-ek
 Felelősek, hogy mindig a meghatározott számú Pod fusson. Pl. ha leáll egy, akkor indít újat, stb.
 Nem felelős azért, hogy mennyi is ez a Pod szám. Nem figyel forgalmat, terhelést, nem kalkulálja ki ezt a számot, csak végrehajt.
+Runtime is állítható, de redeployment esetén csak akkor lesz érvényes, ha DC szinten állítottuk be.
 
 ## Autoscaling
 A Pod-ok erőforrás igényei alapján automatikus skálázás is lehetséges.
 
-
+- A Pod-ok létrehozásakor meg lehet adni a szükséges resource szükségleteket (Requests).
+- Előbbi alapján már kalkulálható, hogy a Pod hol jöjjön létre (scheduling)
+- Limit-ek, felső korlátok is megadhatóak resource-onként Pod-okhoz (mennyi a becsült korlát)
 
