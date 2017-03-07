@@ -13,7 +13,7 @@ A jegyzőkönyvben tesztkérdések és a gyakorlatok anyagaiból felmásolandó 
  
 [A jegyzőkönyvet itt töltsétek ki](https://goo.gl/forms/rKN2WAWNCjxpBulS2)
 
-**A jegyzőkönyvet a labor napján küldjétek be! Az opcionális feladatok beadásának határideje a labor napja +2hét.**
+**A jegyzőkönyvet a labor napján küldjétek be!**
 
 ---
 # Célkitűzés, tematika
