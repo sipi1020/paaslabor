@@ -26,7 +26,7 @@ _Hint: oc get rc, oc get dc, oc scale_
 ### Célja, leírás
 Ennek a feladatnak a célja, hogy kipróbáljuk a POD-ok automatikus skálázását. Az előző feladatból indulj ki.
 
-1. Módosítsd a DeploymentConfig-ot, ahol megadod pl. a CPU request-et.
+- Módosítsd a DeploymentConfig-ot, ahol megadod pl. a CPU request-et.
 ```shell
 oc edit dc
 #containers részbe kell írni
@@ -39,15 +39,15 @@ oc edit dc
 #          requests:
 #            cpu: 50m
 ```
-2. Állítsd be az autoscalinget (oc autoscale) a DeploymentConfigra
+- Állítsd be az autoscalinget (oc autoscale) a DeploymentConfigra
 ```shell
-pl. oc autoscale dc/nodejs-ex --min=1 --max=10 --cpu-percent=10
+oc autoscale dc/nodejs-ex --min=1 --max=10 --cpu-percent=10
 ```
-3. Generálj hálózati forgalmat:
+- Generálj hálózati forgalmat:
 ```shell
 ab -n 100000 -c 1 http://test-gyakorlat3xy.apps.openshift.local/
 ```
-4. Figyeld mi történik a POD-okkal
+- Figyeld mi történik a POD-okkal
 ```shell
 watch oc get pods
 oc get hpa --watch
