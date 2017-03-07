@@ -1,8 +1,6 @@
 ![alerantlogo](http://alerant.hu/img/logo.svg) 
 # BME PaaS labor 
 ## Tudnivalók
-**Oktató:** Nagy Zoltán, [Alerant Informatikai Zrt.](http://alerant.hu)
-
 **Labor email elérhetőség:** alerant.bme.paas.labor@gmail.com
 
 [Minden további tudnivaló itt](docs/Tudnivalok.md)
