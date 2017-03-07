@@ -19,10 +19,10 @@ Ennek a feladatnak a célja, hogy egy saját GitHub account alatti alkalmazást 
 1. Az előző feladatban létrehozott példa alkalmazás alapján készítsetek a saját GitHub accountok alá egy klónozott forrás struktúrát. Lsd. [itt](Tudnivalok.md)   
 2. Az előző feladatot ismételjétek meg ezzel az új Git URL-el és ezúttal CLI parancsok használatával.
 3. Kövesd végig a build és deploy folyamatot (nézd a console-on, vagy a logokat). A végén böngészőből meg lehessen hívni!
-4. Próbáld ki, hogy változtatsz a forráson és újra deployolsz.
+4. Próbáld ki, hogy változtatsz a forráson és újra buildelsz/deployolsz.
 
-_Hint: git parancsok,  oc projects, oc project, oc new-app, oc get svc, oc expose, oc logs -f bc, oc get pods,oc status stb._
-
+_Hint: git parancsok,  oc projects, oc project, oc new-app, oc get svc, oc expose, oc logs -f bc, oc get pods,oc status. oc start-build stb._
+https://docs.openshift.org/latest/cli_reference/basic_cli_operations.html
 
 ### Jegyzőkönyvhöz
 A használt oc parancsokat küldjétek el a jegyzőkönyvben. 
