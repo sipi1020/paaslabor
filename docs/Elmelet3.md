@@ -8,12 +8,13 @@ A következő problémákra kell még megoldás:
 - Alkalmazás buildelési, deployálási folyamatok támogatása.
 - Tenant/Project izoláció.
 
-Ezekre a problémákra vannak megoldások:
+Ezekre a problémákra vannak létező megoldások, technológiák:
 - Kubernetes, Docker Compose, Docker swarm - konténer menedzsment
 - Alkalmazásfejlesztési módszertanok, eszközök: Git vagy más SCM, Jenkins,...
 - Hálózati eszközök: Open vSwitch, Linux kernel technológiák
+- Monitorozás: Hawkular
 
-Az OpenShift ezekre megoldást nyújt, ráépülve a Docker konténer technológiára és más bevált eszközökre.
+Az OpenShift az előbbi problémákra megoldást nyújt, ráépülve a Docker konténer technológiára és más bevált eszközökre.
 
 # OpenShift Origin vs OpenShift Enterprise
 ![origin](../common/images/openshift_vs_origin.png)
@@ -22,9 +23,9 @@ Az OpenShift ezekre megoldást nyújt, ráépülve a Docker konténer technológ
 - **Project**: adminisztratív izoláció, az egyes szállítók külön-külön egymástól izolálva dolgozhatnak. A Node-ot kivéve minden OpenShift entitás/resource Project scopeú.
 - **User**: az OpenShift felhasználói, akik tevékenysége jogosultságkezeléssel korlátozható
 - **Container, Image, Registry**: Az OpenShift a Docker-t használja konténer technológiaként ezért ezek pontosan a Docker foglamak.
-- **Pod**: Egy vagy több konténer, közös tárterülettel, hálózattal. Telepítési, maanagement egység.
+- **Pod**: Egy vagy több konténer, közös tárterülettel, hálózattal. Telepítési, management egység.
 - **Node**: Podokat futtató gép.
-- **Service**: Egy hálózati portot reprezentál, amin elérhetőek a mögé bekötött POD-ok ill. azok szolgáltatásai. Belső terhelés elosztóként működnek. 
+- **Service**: Egy belső hálózati portot reprezentál, amin -abstrakt módon- elérhetőek a mögé bekötött POD-ok ill. azok szolgáltatásai. Belső terhelés elosztóként működnek. 
 - **Build, BuildConfig**: Egy alkalmazás forráskódjából Docker image készül. Ez a folyamat a Build és ennek a paraméterezése a BuildConfig.
 Az OpenShift alapegységei YAML ill. JSON formátumban is leírhatók. 
 
@@ -63,8 +64,6 @@ Ezen kívül a buildelési folyamat customizálható több ponton:
 2. Run script - Hogyan kell majd futtatni az előállt eredményterméket.
 3. Save-Artifacts - A build során használt csomagok, libek elmenthetők, hogy ne kelljen minden buildnél az összes - nem változott- függőséget letölteni.
 
-
-
 ## Telepítési folyamat
 
 ![appflow](../common/images/deploy_flow.png)
@@ -91,6 +90,7 @@ oc CMD --help
 oc types            --OpenShift alap entitások leírása
 oc login            --belépés
 oc new-app          --új alkalmazás létrehozása
+#stb. lsd. gyakorlati anyagokban
 ```
 
 # OpenShift hálózati kommunikáció
@@ -101,25 +101,23 @@ A következő hálózati problémákra ad megoldást az OpenShift
 
 ![networking](../common/images/openshift_arch.png)
 ## Routing
-A fő problémát az jelenti, hogy a különböző Node-okon létrejövő Pod-ok(akár több Docker container-rel)-ban futó alkalmazást, hogyan lehet kívülről elérni, használni.
-A **Service** fogalom egy hálózati végpontot reprezentál, ez kívülről még nem érhető el. A Service egy "stabil" IP port (nem egy belső docker által osztott port), amelyen elérhető akár több POD által is nyújtott szolgáltatás (loadbalancer)
+A fő problémát az jelenti, hogy a különböző Node-okon létrejövő Pod-okban futó alkalmazást, hogyan lehet kívülről elérni, használni.
+A **Service** fogalom egy hálózati végpontot reprezentál, ez kívülről még nem érhető el. A Service egy "stabil" hálózati port (nem egy belső docker által osztott port), amelyen elérhető akár több POD által is nyújtott szolgáltatás (loadbalancer).
 
 **Service**
 
 - A service nem kötődik konkrét POD-hoz(hiszen az dinamikusan változhat), hanem ún. selector-ral lehet POD-ok címkéire hivatkozni
 - Egy POD egy másik POD-dal Service-en keresztül kommunikálhat egy projekten belül.
 - A projekten belüli POD-ok konténereiben környezeti változók jönnek létre az egyes Service-ekhez: SVC_NAME_SERVICE_ADDRESS, _PORT
-- A belső DNS alapján is feldoldhatják a Service-ek host neveit: SVC_NAME.PROJECT_NAME.svc.cluster.local
+- Az OpenShift belső DNS megoldása alapján is feldoldhatóak a Service-ek host nevei: SVC_NAME.PROJECT_NAME.svc.cluster.local
 
-Az OpenShift ezt úgy oldja meg, hogy egy Router komponens segítségével biztosít belépést a külső hívóknak.
-Többféle Router is lehet, mi a HAProxy megoldást vizsgáljuk meg. 
+A kívülről elérhetőség problémáját az OpenShift úgy oldja meg, hogy egy Router komponens segítségével biztosít belépést a külső hívóknak.
 
 Az egyes Node-okra kerül egy Router, egy HAProxy, amely fogadja a hálózati forgalmat és megkeresi a megfelelő Service-ket, amelyek felé delegálnia kell. 
 Pl. a :80 -as porton érkező forgalmat a Router a "frontend" címkével rendelkező Service-ek felé irányítja, ahonnan már a megfelelő Pod-ok elérhetőek.
 
 ## Docker containerek közötti kommunikáció
-A Kubernetes oldja meg, hogy egy Pod kap egy belső IP címet, mintha egy különálló Host géo lenne. Ezen a "virtualizált" hoston futnak a Docker containerek így azok képesek
-kommunikálni egymással.
+A Kubernetes oldja meg, hogy egy Pod kap egy belső IP címet, mintha egy különálló Host gép lenne. Ezen a "virtualizált" hoston futnak a Docker containerek így azok képesek kommunikálni egymással.
 Pod-ok egymással nem (így) kommunikálnak. Pod-ok más Pod-okkal Service-en keresztül kommunikálhatnak.
 
 ## OpenShift SDN
