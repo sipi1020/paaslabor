@@ -89,11 +89,6 @@ dnsmasq config fájl: /etc/NetworkManager/dnsmasq.d
 
 ## OpenShift témához
 - OpenShift dashboard: https://bmepaas-master.openshift.local:8443
-- Node1 gépen nézelődés: ssh student@bmepaas-node1.openshift.local (jelszó: student)
-- Node2 gépen nézelődés: ssh student@bmepaas-node2.openshift.local (jelszó: student)
-
-**Node1, Node2 gépeken csak a readonly docker parancsokat használd!!!**
-
 
 ## Jegyzőkönyv
 
