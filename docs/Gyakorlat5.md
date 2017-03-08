@@ -4,7 +4,7 @@
 [Fontos információk](Tudnivalok.md)
 
 **Fontos:**
-- OpenShift konvenviók:
+- OpenShift konvenciók:
  - Felhasználónevetek legyen: studentxy - ahol x y a nevetek kezdőbetűi pl. studentnz (kisbetűk)
  - Projektek nevei: gyakorlatNxy - N a gyakorlat száma, x, y lsd. előbb, pl. gyakorlat2nz (kisbetűk)
 - Mindenki a saját userét használja ezután, hogy izoláltan dolgozzatok!
