@@ -66,8 +66,8 @@ Ezen kívül a buildelési folyamat customizálható több ponton:
 
 ## Telepítési folyamat
 
-![appflow](../common/images/deploy_flow.png)
 ![appflow1](../common/images/deploy_flow1.png)
+![appflow](../common/images/deploy_flow.png)
 
 **DeploymentConfig**
 
