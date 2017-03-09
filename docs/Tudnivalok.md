@@ -1,5 +1,20 @@
 # Tudnivalók
 
+## VirtualBox importálás
+### Korábbi virtuális gép törlése
+Óvatosan, nehogy más virtuális gépét töröljétek ki!
+
+1. A workstation-n VirtualBox-ban a CentOS7-et kiválasztva Delete/Törlés, Delete All files választása
+2. Ellenőrizd a VirtualBox->File->Virtual Media Manager pontban, hogy nem létezik a CentOS7-es disk, ha ott van, akkor töröld.
+
+### Virtuális gép importálása
+1. Hozd létre a D:\Work\VirtualBox könyvtárat (ha ott van már és nincs másnak a virtuális gépe benne, akkor törölj belőle mindent)
+2. VirtualBox-ban:
+
+- File->Preferences->General->Default Machince folder beállítása: D:\Work\VirtualBox
+- Import Appliance: D:\VPCImages\PAAS\student.ova 
+- Ellenőrizd a wizard utolsó lépésénél, hogy jó útvonal került-e be
+
 ## VirtualBox CentOS információk
 - VirtualBox-ban indítsd el a CentOS image-et és ebben dolgozz!
 - itt aláljátok meg az image-et, amit importáljatok VirtualBox-ba:D:\VPCImages\PAAS
