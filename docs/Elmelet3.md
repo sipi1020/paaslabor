@@ -169,3 +169,4 @@ A Pod-ok erőforrás igényei alapján automatikus skálázás is lehetséges.
 - Előbbi alapján már kalkulálható, hogy a Pod hol jöjjön létre (scheduling)
 - Limit-ek, felső korlátok is megadhatóak resource-onként Pod-okhoz (mennyi a becsült korlát)
 
+https://www.youtube.com/watch?v=lk1IXYOs3WM
