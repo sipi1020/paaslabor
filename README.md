@@ -42,7 +42,7 @@ A labor célja a következő témák áttekintése:
 ## Gyakorlat 3. - OpenShift S2I deployment
 [A gyakorlat itt érhető el](docs/Gyakorlat3.md)
 
-# Opcionális gyakorlatok
+# Opcionális gyakorlatok - választható sorrendben
 ## Gyakorlat 4. - Hálózat
 [A gyakorlat itt érhető el](docs/Gyakorlat4.md)
 ## Gyakorlat 5. - OpenShift Skálázási parancsok
