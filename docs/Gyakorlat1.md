@@ -26,7 +26,7 @@ ip link show
 ---
 
 ## Feladat 1. - Docker alapműveletek 
-**Időtartam: ~30 perc**
+**Időtartam: ~15 perc**
 
 ### Célja, leírás
 Ennek a feladatnak a célja, hogy a legfontosabb Docker parancsokat megismerjétek.
@@ -51,7 +51,7 @@ A jegyzőkönyvhöz másold ki egy text fájlba az utolsó pontra adott választ
 ---
 
 ## Feladat 2. - Docker www szerver
-**Időtartam: ~30 perc**
+**Időtartam: ~15 perc**
 
 ### Célja, leírás
 Ennek a feladatnak a célja, hogy egy futó konténernek valahogy a hasznát is vegyük. 
@@ -71,7 +71,7 @@ A kulcs parancsokkal együtt egy 2-3 mondatos leírás legyen, hogy hogyan oldot
 ---
 
 ## Feladat 3. - Docker hálózatok
-**Időtartam: ~20 perc**
+**Időtartam: ~15 perc**
 
 ### Célja, leírás
 Futtassuk az előbbi konténert, ami kinyitja a 80-as portot és ellenőrizzük a hálózati működést.
@@ -81,8 +81,8 @@ Futtassuk az előbbi konténert, ami kinyitja a 80-as portot és ellenőrizzük 
 3. Indítsd el pl. az előbbi feladat konténerét úgy, hogy nyisson egy portot a hoszton.
 4. Ellenőrizd a host gépen, hogy milyen hálózati interfészek vannak. Mi változott? Ellenőrizd a bridge-ket is!
 5. Próbáld ki a docker network inspect parancsot. Figyeld meg, hogy milyen konténerek csatlakoznak.
-6. (Opcionális) Akár több konténert is indíthatsz és az előbbi pontokat megnézheted ismét.
+6. Akár több konténert is indíthatsz és az előbbi pontokat megnézheted ismét.
 
 _Hint: ezek a parancsok lesznek hasznotokra: docker network, brctl, ifconfig_
 ### Jegyzőkönyvhöz
-Nincs feladat.
+A jegyzőkönyvben szereplő kérdést válaszold meg!
