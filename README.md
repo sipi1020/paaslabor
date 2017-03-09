@@ -48,5 +48,5 @@ A labor célja a következő témák áttekintése:
 ## Gyakorlat 5. - OpenShift Skálázási parancsok
 [A gyakorlat itt érhető el](docs/Gyakorlat5.md)
 
-# Értékelés
+# A labor értékelése
 [Az értékelés nem kötelező, névtelen, itt tölthetitek ki](https://goo.gl/forms/ibs2e7X2sGViZgH93)
