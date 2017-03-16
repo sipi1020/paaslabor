@@ -7,11 +7,11 @@
 
 ## Jegyzőkönyv
 Az értékelés/érdemjegy alapja, mindenki töltse ki és küldje el az email címével.
-A jegyzőkönyvben tesztkérdések és a gyakorlatok anyagaiból felmásolandó feladatok is vannak. Érdemes menet közben tölteni és egy külön dokumentumban külön is tárolni, nehogy elvesszen!
+A jegyzőkönyvben tesztkérdések és a gyakorlatok anyagaiból felmásolandó feladatok is vannak. Érdemes menet közben tölteni és egy külön dokumentumban külön is tárolni, nehogy elvesszen, vagy később is be tudjátok küldeni!
  
 [A jegyzőkönyvet itt töltsétek ki](https://goo.gl/forms/DItsBSJhdKnSf9KR2)
 
-**A jegyzőkönyvet a labor napján küldjétek be!**
+**A jegyzőkönyvet a labor hét péntekével bezárólag küldjétek be!**
 
 ---
 # Célkitűzés, tematika
