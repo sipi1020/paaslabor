@@ -100,7 +100,7 @@ A következőkön haladjatok végig és a megjelölt adatokat gyűjtsétek be a 
 4. Ugyanígy nézd át az oc CLI -vel is a projektetd, a POD-od, a service-t.
 5. Derítsd ki, hogy melyik Node-ra (gépre) települt ki és milyen IP-n port-on hallagatózik
 
-_Hint: ezek a parancsok lesznek hasznotokra: oc new-app, docker images, docker inspect, oc get svc stb._
+_Hint: ezek a parancsok lesznek hasznotokra: oc new-app, oc get pods, oc get svc stb._
 
 ### Jegyzőkönyvhöz
 Írd le az 5. pont eredményét és azt, hogy hogyan derítetted ki.
