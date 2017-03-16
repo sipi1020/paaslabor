@@ -31,17 +31,17 @@ ip link show
 ### Célja, leírás
 Ennek a feladatnak a célja, hogy a legfontosabb Docker parancsokat megismerjétek.
 
-1. Listázd az elérhető Docker parancsokat, ismerkedj meg a help-jével, hogy könnyen megtalálj majd mindent a későbbiekben. (pl. a debug opció mindig jól jön)
+1. Listázd az elérhető Docker parancsokat, ismerkedj meg a help-jével, hogy könnyen megtalálj majd mindent a későbbiekben.
 2. Nézd meg milyen image-ek vannak már lehúzva a helyi registry-be.
 3. Húzz le egy cirros image-et. Próbáld ki az image keresést is. (docker.io/cirros)
 4. Indítsd el az előbbi cirros image-ből készített container-t
-  1. Lépj be rá egy terminálba /bin/sh shell-be és győződj meg róla, hogy valóban egy izolált containerben vagy!
-  2 Hasonlítsd össze a futó processzeket a containerben és a host gépen.
+  1. Lépj be rá egy terminálba /bin/sh shell-be és győződj meg róla, hogy valóban egy izolált containerben vagy! (docker run -it kapcsolóra keress rá akár neten!)
+  2 Hasonlítsd össze a futó processzeket a containerben és a host gépen. (ps)
 5. Ellenőrizd a következőket a futó containerben
   1. Mi a container host neve?
   2. Milyen nameserver van beállítva?
   3. Milyen hálózati interfészek vannak? Mi a gateway? Milyen IP-t kapott?
-  4. Milyen a routing table?
+  4. Milyen a routing table? (pl. netstat -nr)
 6. Fusson a cirros konténer és nyomozd ki, hogy a HOST gépen (tehát a VirtualBox-os image-en) melyik fájlban tárolódik a container "/etc/hostname" fájlja!
 
 _Hint: ezek a parancsok lesznek hasznotokra: docker search, docker pull, docker run -it, docker ps, netstat -nr, docker inspect stb._
@@ -60,7 +60,7 @@ A feladat, hogy futtassatok Docker containerben egy web szervert. A host gépen 
 Javasolt web szerver: nginx
 A következőket biztosan meg kell oldani:
 
-1. A konténer belső portjának megnyitása a host felé
+1. A konténer belső portjának megnyitása a host felé (docker run -p)
 2. Figyeljétek meg a konténer státuszát! élettartamát! Ha megváltoztattok benne pl. egy index.html-et és leállítjátok, akkor következő indításnál már nem lesz ott.
 3. (Opcionális) Esetleg köteg becsatolással is megoldható (docker run -v ...).
 
