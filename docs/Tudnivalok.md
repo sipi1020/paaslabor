@@ -52,6 +52,7 @@ Gyakorlatokban így klónozz le példákat:
 ```shell
 # példa Java OpenShift Wildfly alkalmazás klónozása
 git clone https://github.com/bparees/openshift-jee-sample gyakorlat2
+git pull https://github.com/bparees/openshift-jee-sample gyakorlat2
 
 # ne az eredeti helyre tegyük vissza
 git remote set-url origin https://github.com/alerantbmenz/gyakorlat2.git
