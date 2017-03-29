@@ -9,7 +9,10 @@
 Az értékelés/érdemjegy alapja, mindenki töltse ki és küldje el az email címével.
 A jegyzőkönyvben tesztkérdések és a gyakorlatok anyagaiból felmásolandó feladatok is vannak. Érdemes menet közben tölteni és egy külön dokumentumban külön is tárolni, nehogy elvesszen, vagy később is be tudjátok küldeni!
  
-[A jegyzőkönyvet itt töltsétek ki](https://goo.gl/forms/dcl6MS2zr0AXLLtW2)
+[A 03.29-i jegyzőkönyvet itt töltsétek ki](https://goo.gl/forms/dcl6MS2zr0AXLLtW2)
+
+[A 03.30-i jegyzőkönyvet itt töltsétek ki](https://goo.gl/forms/JS3Pru5aIFaNelDP2)
+
 
 **A jegyzőkönyvet a labor hét péntekével bezárólag küldjétek be!**
 
